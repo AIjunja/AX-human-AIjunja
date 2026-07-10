@@ -1,0 +1,11 @@
+﻿{
+    "status":  "READY",
+    "message":  "최종 산출물 확정 시점까지의 원본 대화 로그 snapshot과 fresh-session 원본 로그가 포함되어 있습니다.",
+    "cutoff":  "2026-07-10T23:39:31.8208267+09:00",
+    "log_bytes":  1965151,
+    "log_sha256":  "d56ce6018849c16aea44e77f787f1f3ae4c4d8e13237f8462fae32c8cf26d586",
+    "byte_for_byte_prefix_match":  true,
+    "zip_path":  "C:\\Users\\letgo\\Documents\\인재전쟁\\final-deliverables\\신준형_AX인재전쟁_채널톡.zip",
+    "zip_bytes":  627780,
+    "zip_sha256":  "37d8709752eb92ca0bfa1b7bc83e79848dd787577b41461f9dd2801efd5f214d"
+}

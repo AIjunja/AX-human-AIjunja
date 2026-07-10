@@ -1,0 +1,14 @@
+﻿{
+    "status":  "VERIFIED_CUTOFF_SNAPSHOT",
+    "cutoff_file_time":  "2026-07-10T23:39:31.8208267+09:00",
+    "source_path":  "C:\\Users\\letgo\\.codex\\sessions\\2026\\07\\10\\rollout-2026-07-10T22-00-27-019f4c1d-6a00-7972-9f01-a7e287402daa.jsonl",
+    "snapshot_path":  "C:\\Users\\letgo\\Documents\\인재전쟁\\final-workspaces\\channel-talk\\logs\\codex-current-task-raw.jsonl",
+    "snapshot_bytes":  1965151,
+    "source_prefix_sha256":  "d56ce6018849c16aea44e77f787f1f3ae4c4d8e13237f8462fae32c8cf26d586",
+    "snapshot_sha256":  "d56ce6018849c16aea44e77f787f1f3ae4c4d8e13237f8462fae32c8cf26d586",
+    "byte_for_byte_prefix_match":  true,
+    "plausible_secret_hits":  0,
+    "zip_path":  "C:\\Users\\letgo\\Documents\\인재전쟁\\final-deliverables\\신준형_AX인재전쟁_채널톡.zip",
+    "zip_bytes":  627780,
+    "zip_sha256":  "37d8709752eb92ca0bfa1b7bc83e79848dd787577b41461f9dd2801efd5f214d"
+}
