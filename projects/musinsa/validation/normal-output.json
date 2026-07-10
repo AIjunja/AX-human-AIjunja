@@ -25,27 +25,50 @@
           "source": "apple_app_store",
           "source_url": "https://itunes.apple.com/kr/rss/customerreviews/page=1/id=1003139529/sortby=mostrecent/json",
           "review_date": "2026-07-08T20:25:49-07:00",
-          "rating": 1
+          "rating": 1,
+          "review_text": {
+            "text_basis": "raw_review_text",
+            "raw_review_text": "상품 페이지에 들어가면 정상 판매 중인 상품까지 전부 품절로 표시되는 오류가 반복적으로 발생합니다. 결제 과정은 지나치게 느리고, 상품 목록과 상세 페이지를 오가는 기본적인 화면 전환조차 버벅거릴 정도로 최적화가 부족합니다. 사용 중에는 휴대폰 발열도 심하게 올라와 단순한 일시적 불편이 아니라 앱 성능과 안정성 전반에 구조적인 문제가 있는 것처럼 느껴집니다. 상품 조회, 화면 전환, 결제처럼 가장 기본적인 기능부터 안정적으로 동작할 수 있도록 서버 증설과 앱 최적화를 포함한 근본적인 개선이 필요합니다.",
+            "raw_text_sha256": "1d1f852292533e09fac0233a57c4023f02fffbbc332008ac159351b630b2ee8b"
+          }
         }
       ],
-      "status": "READY_FOR_REPRO",
-      "information_gaps": [],
+      "matched_evidence": {
+        "text": "결제 과정은 지나치게 느",
+        "start_offset": 56,
+        "end_offset": 69,
+        "source_text_sha256": "1d1f852292533e09fac0233a57c4023f02fffbbc332008ac159351b630b2ee8b",
+        "text_basis": "raw_review_text",
+        "is_raw_review_text": true,
+        "raw_text_sha256": "1d1f852292533e09fac0233a57c4023f02fffbbc332008ac159351b630b2ee8b",
+        "evidence_id": "APPSTORE-14280470370",
+        "source_review_id": "14280470370"
+      },
+      "status": "TEST_SCENARIO_ONLY",
+      "information_gaps": [
+        "device_environment_confirmation",
+        "os_version_environment_confirmation"
+      ],
       "environment": {
         "device": "TEST-iPhone-15",
         "os_version": "TEST-iOS-18.5",
         "app_version": "4.81.0",
-        "provenance": "synthetic_test_context"
+        "provenance": {
+          "device": "synthetic_test_context",
+          "os_version": "synthetic_test_context",
+          "app_version": "store_metadata"
+        }
       },
       "reproduction_draft": {
         "preconditions": [
           "테스트 계정·상품·데이터를 사람이 확정한다"
         ],
         "steps": [
-          "checkout 여정 단계에 진입한다",
-          "리뷰에 보고된 사용자 동작을 수행한다",
-          "실제 결과와 화면·시각·환경을 기록한다"
+          "결제 시작 시각과 진입 화면 상태를 기록한다",
+          "결제 단계를 진행하며 각 주요 응답 시각을 기록한다",
+          "최종 응답 시각·도달 화면·결제 상태를 함께 기록한다"
         ],
-        "expected": "정의된 서비스 상태와 사용자 흐름이 유지된다",
+        "expected": "사람이 입력한 정책·임계값과 실제 관찰을 비교한다",
         "observed": "결제 단계의 응답이 지연된다고 보고됨",
         "human_validation_required": true
       },
@@ -78,27 +101,50 @@
           "source": "apple_app_store",
           "source_url": "https://itunes.apple.com/kr/rss/customerreviews/page=1/id=1003139529/sortby=mostrecent/json",
           "review_date": "2026-07-08T20:25:49-07:00",
-          "rating": 1
+          "rating": 1,
+          "review_text": {
+            "text_basis": "raw_review_text",
+            "raw_review_text": "상품 페이지에 들어가면 정상 판매 중인 상품까지 전부 품절로 표시되는 오류가 반복적으로 발생합니다. 결제 과정은 지나치게 느리고, 상품 목록과 상세 페이지를 오가는 기본적인 화면 전환조차 버벅거릴 정도로 최적화가 부족합니다. 사용 중에는 휴대폰 발열도 심하게 올라와 단순한 일시적 불편이 아니라 앱 성능과 안정성 전반에 구조적인 문제가 있는 것처럼 느껴집니다. 상품 조회, 화면 전환, 결제처럼 가장 기본적인 기능부터 안정적으로 동작할 수 있도록 서버 증설과 앱 최적화를 포함한 근본적인 개선이 필요합니다.",
+            "raw_text_sha256": "1d1f852292533e09fac0233a57c4023f02fffbbc332008ac159351b630b2ee8b"
+          }
         }
       ],
-      "status": "READY_FOR_REPRO",
-      "information_gaps": [],
+      "matched_evidence": {
+        "text": "발열",
+        "start_offset": 137,
+        "end_offset": 139,
+        "source_text_sha256": "1d1f852292533e09fac0233a57c4023f02fffbbc332008ac159351b630b2ee8b",
+        "text_basis": "raw_review_text",
+        "is_raw_review_text": true,
+        "raw_text_sha256": "1d1f852292533e09fac0233a57c4023f02fffbbc332008ac159351b630b2ee8b",
+        "evidence_id": "APPSTORE-14280470370",
+        "source_review_id": "14280470370"
+      },
+      "status": "TEST_SCENARIO_ONLY",
+      "information_gaps": [
+        "device_environment_confirmation",
+        "os_version_environment_confirmation"
+      ],
       "environment": {
         "device": "TEST-iPhone-15",
         "os_version": "TEST-iOS-18.5",
         "app_version": "4.81.0",
-        "provenance": "synthetic_test_context"
+        "provenance": {
+          "device": "synthetic_test_context",
+          "os_version": "synthetic_test_context",
+          "app_version": "store_metadata"
+        }
       },
       "reproduction_draft": {
         "preconditions": [
           "테스트 계정·상품·데이터를 사람이 확정한다"
         ],
         "steps": [
-          "cross_cutting_performance 여정 단계에 진입한다",
-          "리뷰에 보고된 사용자 동작을 수행한다",
-          "실제 결과와 화면·시각·환경을 기록한다"
+          "동일 환경에서 유휴 기준 상태의 온도·성능을 측정한다",
+          "사람이 정한 횟수만큼 목록·상세 탐색을 반복한다",
+          "반복 탐색 후 온도·응답 시간·성능 상태를 기준 상태와 비교 기록한다"
         ],
-        "expected": "정의된 서비스 상태와 사용자 흐름이 유지된다",
+        "expected": "사람이 입력한 정책·임계값과 실제 관찰을 비교한다",
         "observed": "앱 사용 중 기기 발열이 증가한다고 보고됨",
         "human_validation_required": true
       },
@@ -131,27 +177,50 @@
           "source": "apple_app_store",
           "source_url": "https://itunes.apple.com/kr/rss/customerreviews/page=1/id=1003139529/sortby=mostrecent/json",
           "review_date": "2026-07-08T20:25:49-07:00",
-          "rating": 1
+          "rating": 1,
+          "review_text": {
+            "text_basis": "raw_review_text",
+            "raw_review_text": "상품 페이지에 들어가면 정상 판매 중인 상품까지 전부 품절로 표시되는 오류가 반복적으로 발생합니다. 결제 과정은 지나치게 느리고, 상품 목록과 상세 페이지를 오가는 기본적인 화면 전환조차 버벅거릴 정도로 최적화가 부족합니다. 사용 중에는 휴대폰 발열도 심하게 올라와 단순한 일시적 불편이 아니라 앱 성능과 안정성 전반에 구조적인 문제가 있는 것처럼 느껴집니다. 상품 조회, 화면 전환, 결제처럼 가장 기본적인 기능부터 안정적으로 동작할 수 있도록 서버 증설과 앱 최적화를 포함한 근본적인 개선이 필요합니다.",
+            "raw_text_sha256": "1d1f852292533e09fac0233a57c4023f02fffbbc332008ac159351b630b2ee8b"
+          }
         }
       ],
-      "status": "READY_FOR_REPRO",
-      "information_gaps": [],
+      "matched_evidence": {
+        "text": "품절로 표시",
+        "start_offset": 30,
+        "end_offset": 36,
+        "source_text_sha256": "1d1f852292533e09fac0233a57c4023f02fffbbc332008ac159351b630b2ee8b",
+        "text_basis": "raw_review_text",
+        "is_raw_review_text": true,
+        "raw_text_sha256": "1d1f852292533e09fac0233a57c4023f02fffbbc332008ac159351b630b2ee8b",
+        "evidence_id": "APPSTORE-14280470370",
+        "source_review_id": "14280470370"
+      },
+      "status": "TEST_SCENARIO_ONLY",
+      "information_gaps": [
+        "device_environment_confirmation",
+        "os_version_environment_confirmation"
+      ],
       "environment": {
         "device": "TEST-iPhone-15",
         "os_version": "TEST-iOS-18.5",
         "app_version": "4.81.0",
-        "provenance": "synthetic_test_context"
+        "provenance": {
+          "device": "synthetic_test_context",
+          "os_version": "synthetic_test_context",
+          "app_version": "store_metadata"
+        }
       },
       "reproduction_draft": {
         "preconditions": [
           "테스트 계정·상품·데이터를 사람이 확정한다"
         ],
         "steps": [
-          "detail 여정 단계에 진입한다",
-          "리뷰에 보고된 사용자 동작을 수행한다",
-          "실제 결과와 화면·시각·환경을 기록한다"
+          "판매 가능 상태의 대상 상품을 사람이 선정한다",
+          "상품 상세에 진입한다",
+          "상품 기준 상태·품절 표시·구매 CTA 상태를 함께 기록한다"
         ],
-        "expected": "정의된 서비스 상태와 사용자 흐름이 유지된다",
+        "expected": "사람이 입력한 정책·임계값과 실제 관찰을 비교한다",
         "observed": "상품 상세에서 판매 가능 여부와 품절 표시가 일치하지 않는다고 보고됨",
         "human_validation_required": true
       },
@@ -184,27 +253,50 @@
           "source": "apple_app_store",
           "source_url": "https://itunes.apple.com/kr/rss/customerreviews/page=1/id=1003139529/sortby=mostrecent/json",
           "review_date": "2026-07-08T20:25:49-07:00",
-          "rating": 1
+          "rating": 1,
+          "review_text": {
+            "text_basis": "raw_review_text",
+            "raw_review_text": "상품 페이지에 들어가면 정상 판매 중인 상품까지 전부 품절로 표시되는 오류가 반복적으로 발생합니다. 결제 과정은 지나치게 느리고, 상품 목록과 상세 페이지를 오가는 기본적인 화면 전환조차 버벅거릴 정도로 최적화가 부족합니다. 사용 중에는 휴대폰 발열도 심하게 올라와 단순한 일시적 불편이 아니라 앱 성능과 안정성 전반에 구조적인 문제가 있는 것처럼 느껴집니다. 상품 조회, 화면 전환, 결제처럼 가장 기본적인 기능부터 안정적으로 동작할 수 있도록 서버 증설과 앱 최적화를 포함한 근본적인 개선이 필요합니다.",
+            "raw_text_sha256": "1d1f852292533e09fac0233a57c4023f02fffbbc332008ac159351b630b2ee8b"
+          }
         }
       ],
-      "status": "READY_FOR_REPRO",
-      "information_gaps": [],
+      "matched_evidence": {
+        "text": "전환조차 버벅",
+        "start_offset": 100,
+        "end_offset": 107,
+        "source_text_sha256": "1d1f852292533e09fac0233a57c4023f02fffbbc332008ac159351b630b2ee8b",
+        "text_basis": "raw_review_text",
+        "is_raw_review_text": true,
+        "raw_text_sha256": "1d1f852292533e09fac0233a57c4023f02fffbbc332008ac159351b630b2ee8b",
+        "evidence_id": "APPSTORE-14280470370",
+        "source_review_id": "14280470370"
+      },
+      "status": "TEST_SCENARIO_ONLY",
+      "information_gaps": [
+        "device_environment_confirmation",
+        "os_version_environment_confirmation"
+      ],
       "environment": {
         "device": "TEST-iPhone-15",
         "os_version": "TEST-iOS-18.5",
         "app_version": "4.81.0",
-        "provenance": "synthetic_test_context"
+        "provenance": {
+          "device": "synthetic_test_context",
+          "os_version": "synthetic_test_context",
+          "app_version": "store_metadata"
+        }
       },
       "reproduction_draft": {
         "preconditions": [
           "테스트 계정·상품·데이터를 사람이 확정한다"
         ],
         "steps": [
-          "listing_detail 여정 단계에 진입한다",
-          "리뷰에 보고된 사용자 동작을 수행한다",
-          "실제 결과와 화면·시각·환경을 기록한다"
+          "목록→상세→뒤로 이동할 대상 상품과 반복 횟수를 사람이 정한다",
+          "목록→상세→뒤로 이동을 반복한다",
+          "각 전환의 시작·완료 시각과 화면·스크롤 상태를 기록한다"
         ],
-        "expected": "정의된 서비스 상태와 사용자 흐름이 유지된다",
+        "expected": "사람이 입력한 정책·임계값과 실제 관찰을 비교한다",
         "observed": "목록과 상품 상세 사이 화면 전환이 지연된다고 보고됨",
         "human_validation_required": true
       },
@@ -228,13 +320,24 @@
         "APPSTORE-14280470370"
       ],
       "preconditions": [
-        "테스트 계정과 대상 상품을 사람이 확정한다"
+        "테스트 계정·상품·데이터와 환경을 사람이 확정한다"
       ],
       "steps": [
-        "해당 여정 단계에 진입한다",
-        "관찰 증상과 동일한 사용자 동작을 수행한다"
+        "결제 시작 시각과 진입 화면 상태를 기록한다",
+        "결제 단계를 진행하며 각 주요 응답 시각을 기록한다",
+        "최종 응답 시각·도달 화면·결제 상태를 함께 기록한다"
       ],
-      "oracle": "관찰 증상이 발생하지 않고 기대 상태가 유지되는지 확인한다",
+      "oracle_type": "checkout_response_timing_and_screen_state",
+      "required_observations": [
+        "checkout_start_timestamp",
+        "checkout_response_timestamps",
+        "screen_state_sequence",
+        "payment_state"
+      ],
+      "human_defined_thresholds": [
+        "허용 결제 응답 시간",
+        "단계별 기대 화면과 결제 상태"
+      ],
       "automation_candidate": null,
       "automation_assessment": "HUMAN_ASSESSMENT_REQUIRED",
       "human_review_required": true
@@ -248,13 +351,24 @@
         "APPSTORE-14280470370"
       ],
       "preconditions": [
-        "테스트 계정과 대상 상품을 사람이 확정한다"
+        "테스트 계정·상품·데이터와 환경을 사람이 확정한다"
       ],
       "steps": [
-        "해당 여정 단계에 진입한다",
-        "관찰 증상과 동일한 사용자 동작을 수행한다"
+        "동일 환경에서 유휴 기준 상태의 온도·성능을 측정한다",
+        "사람이 정한 횟수만큼 목록·상세 탐색을 반복한다",
+        "반복 탐색 후 온도·응답 시간·성능 상태를 기준 상태와 비교 기록한다"
       ],
-      "oracle": "관찰 증상이 발생하지 않고 기대 상태가 유지되는지 확인한다",
+      "oracle_type": "baseline_vs_repeated_navigation_thermal_performance",
+      "required_observations": [
+        "baseline_temperature",
+        "post_navigation_temperature",
+        "baseline_response_time",
+        "post_navigation_response_time"
+      ],
+      "human_defined_thresholds": [
+        "반복 탐색 횟수와 측정 방법",
+        "허용 온도 변화와 성능 저하 기준"
+      ],
       "automation_candidate": null,
       "automation_assessment": "HUMAN_ASSESSMENT_REQUIRED",
       "human_review_required": true
@@ -268,13 +382,23 @@
         "APPSTORE-14280470370"
       ],
       "preconditions": [
-        "테스트 계정과 대상 상품을 사람이 확정한다"
+        "테스트 계정·상품·데이터와 환경을 사람이 확정한다"
       ],
       "steps": [
-        "해당 여정 단계에 진입한다",
-        "관찰 증상과 동일한 사용자 동작을 수행한다"
+        "판매 가능 상태의 대상 상품을 사람이 선정한다",
+        "상품 상세에 진입한다",
+        "상품 기준 상태·품절 표시·구매 CTA 상태를 함께 기록한다"
       ],
-      "oracle": "관찰 증상이 발생하지 않고 기대 상태가 유지되는지 확인한다",
+      "oracle_type": "availability_label_cta_consistency",
+      "required_observations": [
+        "catalog_sellable_state",
+        "displayed_availability_label",
+        "purchase_cta_state"
+      ],
+      "human_defined_thresholds": [
+        "판매 가능 상태의 판정 기준",
+        "품절 표시와 구매 CTA의 기대 정책"
+      ],
       "automation_candidate": null,
       "automation_assessment": "HUMAN_ASSESSMENT_REQUIRED",
       "human_review_required": true
@@ -288,13 +412,24 @@
         "APPSTORE-14280470370"
       ],
       "preconditions": [
-        "테스트 계정과 대상 상품을 사람이 확정한다"
+        "테스트 계정·상품·데이터와 환경을 사람이 확정한다"
       ],
       "steps": [
-        "해당 여정 단계에 진입한다",
-        "관찰 증상과 동일한 사용자 동작을 수행한다"
+        "목록→상세→뒤로 이동할 대상 상품과 반복 횟수를 사람이 정한다",
+        "목록→상세→뒤로 이동을 반복한다",
+        "각 전환의 시작·완료 시각과 화면·스크롤 상태를 기록한다"
       ],
-      "oracle": "관찰 증상이 발생하지 않고 기대 상태가 유지되는지 확인한다",
+      "oracle_type": "navigation_transition_timing_and_state_continuity",
+      "required_observations": [
+        "transition_start_timestamp",
+        "transition_end_timestamp",
+        "rendered_screen_state",
+        "list_position_state"
+      ],
+      "human_defined_thresholds": [
+        "허용 화면 전환 시간",
+        "뒤로 이동 시 기대 목록·스크롤 상태"
+      ],
       "automation_candidate": null,
       "automation_assessment": "HUMAN_ASSESSMENT_REQUIRED",
       "human_review_required": true
@@ -317,15 +452,16 @@
       ]
     }
   },
-  "stable_fields_sha256": "e8cdf10f69de3750b1167aff70fe5ae3648048f356aec89cf52beed7247f2412",
+  "stable_fields_sha256": "0a814c29fad4a2b50f4f8ee4056c051500d42cdeb47108b6561c31e5d11292fe",
   "summary": {
     "input_reviews": 1,
     "input_evidence_ids": 1,
     "tickets": 4,
     "regression_tests": 4,
     "status_counts": {
-      "READY_FOR_REPRO": 4,
-      "NEEDS_REPRO": 0
+      "READY_FOR_REPRO": 0,
+      "TEST_SCENARIO_ONLY": 4,
+      "NEEDS_REPRO_AND_ENVIRONMENT_CONFIRMATION": 0
     },
     "evidence_preservation_rate": 1.0
   },

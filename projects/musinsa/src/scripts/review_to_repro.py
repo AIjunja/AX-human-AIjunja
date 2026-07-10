@@ -84,6 +84,140 @@ SYMPTOM_STATEMENTS = {
     "unclassified_observation": "구체적인 여정 단계와 관찰 증상을 추가로 확인해야 함",
 }
 
+TRUSTED_ENVIRONMENT_PROVENANCE = {
+    "review_reported",
+    "store_metadata",
+    "verified_test_run",
+}
+
+REPRODUCTION_SPECS = {
+    "sold_out_mislabel": {
+        "steps": [
+            "판매 가능 상태의 대상 상품을 사람이 선정한다",
+            "상품 상세에 진입한다",
+            "상품 기준 상태·품절 표시·구매 CTA 상태를 함께 기록한다",
+        ],
+        "oracle_type": "availability_label_cta_consistency",
+        "required_observations": [
+            "catalog_sellable_state",
+            "displayed_availability_label",
+            "purchase_cta_state",
+        ],
+        "human_defined_thresholds": [
+            "판매 가능 상태의 판정 기준",
+            "품절 표시와 구매 CTA의 기대 정책",
+        ],
+    },
+    "checkout_latency": {
+        "steps": [
+            "결제 시작 시각과 진입 화면 상태를 기록한다",
+            "결제 단계를 진행하며 각 주요 응답 시각을 기록한다",
+            "최종 응답 시각·도달 화면·결제 상태를 함께 기록한다",
+        ],
+        "oracle_type": "checkout_response_timing_and_screen_state",
+        "required_observations": [
+            "checkout_start_timestamp",
+            "checkout_response_timestamps",
+            "screen_state_sequence",
+            "payment_state",
+        ],
+        "human_defined_thresholds": [
+            "허용 결제 응답 시간",
+            "단계별 기대 화면과 결제 상태",
+        ],
+    },
+    "navigation_lag": {
+        "steps": [
+            "목록→상세→뒤로 이동할 대상 상품과 반복 횟수를 사람이 정한다",
+            "목록→상세→뒤로 이동을 반복한다",
+            "각 전환의 시작·완료 시각과 화면·스크롤 상태를 기록한다",
+        ],
+        "oracle_type": "navigation_transition_timing_and_state_continuity",
+        "required_observations": [
+            "transition_start_timestamp",
+            "transition_end_timestamp",
+            "rendered_screen_state",
+            "list_position_state",
+        ],
+        "human_defined_thresholds": [
+            "허용 화면 전환 시간",
+            "뒤로 이동 시 기대 목록·스크롤 상태",
+        ],
+    },
+    "device_overheating": {
+        "steps": [
+            "동일 환경에서 유휴 기준 상태의 온도·성능을 측정한다",
+            "사람이 정한 횟수만큼 목록·상세 탐색을 반복한다",
+            "반복 탐색 후 온도·응답 시간·성능 상태를 기준 상태와 비교 기록한다",
+        ],
+        "oracle_type": "baseline_vs_repeated_navigation_thermal_performance",
+        "required_observations": [
+            "baseline_temperature",
+            "post_navigation_temperature",
+            "baseline_response_time",
+            "post_navigation_response_time",
+        ],
+        "human_defined_thresholds": [
+            "반복 탐색 횟수와 측정 방법",
+            "허용 온도 변화와 성능 저하 기준",
+        ],
+    },
+    "external_payment_return_restart": {
+        "steps": [
+            "외부 결제 진입 전 주문·결제·프로모션 상태를 기록한다",
+            "외부 결제 화면에 진입한 뒤 앱으로 복귀한다",
+            "복귀 직후 앱 화면과 주문·결제·프로모션 상태를 비교 기록한다",
+        ],
+        "oracle_type": "external_payment_return_state_continuity",
+        "required_observations": [
+            "pre_external_payment_state",
+            "return_screen_state",
+            "order_state_after_return",
+            "payment_state_after_return",
+            "promotion_state_after_return",
+        ],
+        "human_defined_thresholds": [
+            "외부 결제 복귀 시 기대 화면",
+            "주문·결제·프로모션 상태 보존 정책",
+        ],
+    },
+    "payment_not_completed": {
+        "steps": [
+            "결제 전 주문·결제 상태를 기록한다",
+            "문제가 보고된 결제 흐름을 수행한다",
+            "복귀 후 주문·결제 상태와 결제 사업자 응답을 함께 기록한다",
+        ],
+        "oracle_type": "payment_order_state_consistency",
+        "required_observations": [
+            "payment_provider_response",
+            "order_state",
+            "payment_state",
+            "displayed_completion_state",
+        ],
+        "human_defined_thresholds": [
+            "결제 성공·실패 판정 기준",
+            "주문·결제 상태의 기대 조합",
+        ],
+    },
+    "promotion_state_mismatch": {
+        "steps": [
+            "결제 전 프로모션 사용 상태를 기록한다",
+            "미완료 결제 흐름을 수행한다",
+            "결제 미완료 상태와 프로모션 사용 상태를 함께 확인한다",
+        ],
+        "oracle_type": "payment_promotion_state_consistency",
+        "required_observations": [
+            "payment_completion_state",
+            "promotion_usage_state",
+            "promotion_restoration_state",
+        ],
+        "human_defined_thresholds": [
+            "미완료 결제의 판정 기준",
+            "실패·취소 시 프로모션 복원 정책",
+        ],
+    },
+}
+
 
 class InputValidationError(ValueError):
     pass
@@ -135,7 +269,6 @@ def _validate_payload(payload: object) -> list[dict]:
         "source_url",
         "review_date",
         "locale",
-        "text",
     )
     seen_evidence_ids: set[str] = set()
     for index, review in enumerate(reviews):
@@ -145,6 +278,39 @@ def _validate_payload(payload: object) -> list[dict]:
             value = review.get(field)
             if not isinstance(value, str) or not value.strip():
                 raise InputValidationError(f"reviews[{index}].{field} is required")
+        raw_text = review.get("raw_review_text")
+        normalized_text = review.get("normalized_observation")
+        legacy_text = review.get("text")
+        if not any(
+            isinstance(value, str) and value.strip()
+            for value in (raw_text, normalized_text, legacy_text)
+        ):
+            raise InputValidationError(
+                f"reviews[{index}] requires raw_review_text or normalized_observation"
+            )
+        if isinstance(raw_text, str) and raw_text.strip():
+            actual_hash = hashlib.sha256(raw_text.encode("utf-8")).hexdigest()
+            supplied_hash = review.get("raw_text_sha256")
+            if supplied_hash is not None and supplied_hash != actual_hash:
+                raise InputValidationError(
+                    f"reviews[{index}].raw_text_sha256 does not match raw_review_text"
+                )
+        is_normalized = isinstance(normalized_text, str) and normalized_text.strip()
+        is_legacy_normalized = review.get("text_provenance") == (
+            "normalized_observation_from_public_review"
+        )
+        if is_normalized or is_legacy_normalized:
+            if not isinstance(review.get("normalization_method"), str) or not review[
+                "normalization_method"
+            ].strip():
+                raise InputValidationError(
+                    f"reviews[{index}].normalization_method is required for normalized text"
+                )
+            source_hash = review.get("source_raw_text_sha256")
+            if not isinstance(source_hash, str) or len(source_hash) != 64:
+                raise InputValidationError(
+                    f"reviews[{index}].source_raw_text_sha256 is required for normalized text"
+                )
         evidence_id = review["evidence_id"]
         if evidence_id in seen_evidence_ids:
             raise InputValidationError(f"reviews[{index}].evidence_id must be unique")
@@ -177,16 +343,104 @@ def _stable_id(stage: str, symptom: str, evidence_id: str) -> str:
     return f"MUS-{stage.upper()}-{symptom.upper()}-{digest}"
 
 
+def _review_text_record(review: dict) -> tuple[str, str, dict]:
+    raw_text = review.get("raw_review_text")
+    legacy_text = review.get("text")
+    legacy_is_raw = (
+        isinstance(legacy_text, str)
+        and legacy_text.strip()
+        and review.get("text_provenance")
+        != "normalized_observation_from_public_review"
+    )
+    if isinstance(raw_text, str) and raw_text.strip() or legacy_is_raw:
+        raw_text = raw_text if isinstance(raw_text, str) and raw_text.strip() else legacy_text
+        raw_hash = hashlib.sha256(raw_text.encode("utf-8")).hexdigest()
+        return raw_text, "raw_review_text", {
+            "text_basis": "raw_review_text",
+            "raw_review_text": raw_text,
+            "raw_text_sha256": raw_hash,
+        }
+
+    normalized = review.get("normalized_observation") or review.get("text")
+    return normalized, "normalized_observation", {
+        "text_basis": "normalized_observation",
+        "normalized_observation": normalized,
+        "normalization_method": review["normalization_method"],
+        "source_raw_text_sha256": review["source_raw_text_sha256"],
+        "normalized_text_sha256": hashlib.sha256(
+            normalized.encode("utf-8")
+        ).hexdigest(),
+    }
+
+
+def _environment_readiness(environment: dict) -> tuple[str, list[str]]:
+    provenance = environment.get("provenance")
+    provenance_by_field = provenance if isinstance(provenance, dict) else {}
+    information_gaps = []
+    synthetic_present = False
+    for field in ("device", "os_version", "app_version"):
+        if not environment.get(field):
+            information_gaps.append(field)
+            continue
+        field_provenance = (
+            provenance_by_field.get(field)
+            if isinstance(provenance, dict)
+            else (
+                "synthetic_test_context"
+                if provenance == "synthetic_test_context"
+                else None
+            )
+        )
+        if field_provenance == "synthetic_test_context":
+            synthetic_present = True
+            information_gaps.append(f"{field}_environment_confirmation")
+        elif field_provenance not in TRUSTED_ENVIRONMENT_PROVENANCE:
+            information_gaps.append(f"{field}_provenance")
+
+    if synthetic_present:
+        return "TEST_SCENARIO_ONLY", information_gaps
+    if information_gaps:
+        return "NEEDS_REPRO_AND_ENVIRONMENT_CONFIRMATION", information_gaps
+    return "READY_FOR_REPRO", information_gaps
+
+
+def _symptom_spec(symptom: str, stage: str) -> dict:
+    return REPRODUCTION_SPECS.get(
+        symptom,
+        {
+            "steps": [
+                f"{stage} 여정의 대상 계정·상품·데이터를 사람이 확정한다",
+                f"{symptom} 관찰에 대응하는 사용자 동작과 화면 상태를 기록한다",
+                "사람이 입력한 기대 정책과 실제 상태를 비교한다",
+            ],
+            "oracle_type": f"{symptom}_human_defined_acceptance",
+            "required_observations": [
+                "pre_action_state",
+                "user_action_sequence",
+                "post_action_state",
+            ],
+            "human_defined_thresholds": [
+                "대상 여정의 기대 정책",
+                "허용 상태·시간·횟수 기준",
+            ],
+        },
+    )
+
+
 def _regression_test(ticket: dict) -> dict:
+    symptom = ticket["observed_symptom"]["code"]
+    spec = _symptom_spec(symptom, ticket["journey_stage"])
     return {
         "test_id": ticket["ticket_id"].replace("MUS-", "RT-", 1),
         "ticket_id": ticket["ticket_id"],
         "journey_stage": ticket["journey_stage"],
         "symptom_code": ticket["observed_symptom"]["code"],
         "evidence_ids": ticket["evidence_ids"],
-        "preconditions": ["테스트 계정과 대상 상품을 사람이 확정한다"],
-        "steps": ["해당 여정 단계에 진입한다", "관찰 증상과 동일한 사용자 동작을 수행한다"],
-        "oracle": "관찰 증상이 발생하지 않고 기대 상태가 유지되는지 확인한다",
+        "preconditions": ["테스트 계정·상품·데이터와 환경을 사람이 확정한다"],
+        "steps": list(spec["steps"]),
+        "oracle_type": spec["oracle_type"],
+        "required_observations": list(spec["required_observations"]),
+        "human_defined_thresholds": list(spec["human_defined_thresholds"]),
         "automation_candidate": None,
         "automation_assessment": "HUMAN_ASSESSMENT_REQUIRED",
         "human_review_required": True,
@@ -197,16 +451,21 @@ def build_report(payload: dict) -> dict:
     reviews = _validate_payload(payload)
     tickets = []
     for review in reviews:
-        text = review["text"]
+        text, text_basis, review_text_record = _review_text_record(review)
+        source_text_sha256 = hashlib.sha256(text.encode("utf-8")).hexdigest()
         environment = review.get("environment") or {}
-        information_gaps = [
-            field
-            for field in ("device", "os_version", "app_version")
-            if not environment.get(field)
-        ]
+        status, information_gaps = _environment_readiness(environment)
         review_ticket_count = len(tickets)
         for stage, symptom, phrases in SYMPTOM_RULES:
-            if any(phrase in text for phrase in phrases):
+            phrase_matches = [
+                (text.find(phrase), phrase)
+                for phrase in phrases
+                if text.find(phrase) >= 0
+            ]
+            if phrase_matches:
+                match_start, matched_text = min(phrase_matches, key=lambda item: item[0])
+                match_end = match_start + len(matched_text)
+                spec = _symptom_spec(symptom, stage)
                 tickets.append(
                     {
                         "ticket_id": _stable_id(stage, symptom, review["evidence_id"]),
@@ -225,21 +484,38 @@ def build_report(payload: dict) -> dict:
                                 "source_url": review["source_url"],
                                 "review_date": review["review_date"],
                                 "rating": review["rating"],
+                                "review_text": dict(review_text_record),
                             }
                         ],
-                        "status": "NEEDS_REPRO" if information_gaps else "READY_FOR_REPRO",
+                        "matched_evidence": {
+                            "text": text[match_start:match_end],
+                            "start_offset": match_start,
+                            "end_offset": match_end,
+                            "source_text_sha256": source_text_sha256,
+                            "text_basis": text_basis,
+                            "is_raw_review_text": text_basis == "raw_review_text",
+                            **(
+                                {"raw_text_sha256": source_text_sha256}
+                                if text_basis == "raw_review_text"
+                                else {
+                                    "normalized_text_sha256": source_text_sha256,
+                                    "source_raw_text_sha256": review[
+                                        "source_raw_text_sha256"
+                                    ],
+                                }
+                            ),
+                            "evidence_id": review["evidence_id"],
+                            "source_review_id": review["source_review_id"],
+                        },
+                        "status": status,
                         "information_gaps": information_gaps,
                         "environment": dict(environment),
                         "reproduction_draft": {
                             "preconditions": [
                                 "테스트 계정·상품·데이터를 사람이 확정한다"
                             ],
-                            "steps": [
-                                f"{stage} 여정 단계에 진입한다",
-                                "리뷰에 보고된 사용자 동작을 수행한다",
-                                "실제 결과와 화면·시각·환경을 기록한다",
-                            ],
-                            "expected": "정의된 서비스 상태와 사용자 흐름이 유지된다",
+                            "steps": list(spec["steps"]),
+                            "expected": "사람이 입력한 정책·임계값과 실제 관찰을 비교한다",
                             "observed": SYMPTOM_STATEMENTS[symptom],
                             "human_validation_required": True,
                         },
@@ -248,6 +524,9 @@ def build_report(payload: dict) -> dict:
                     }
                 )
         if len(tickets) == review_ticket_count:
+            match_start = 0
+            match_end = len(text)
+            spec = _symptom_spec("unclassified_observation", "unknown")
             tickets.append(
                 {
                     "ticket_id": _stable_id(
@@ -268,15 +547,36 @@ def build_report(payload: dict) -> dict:
                             "source_url": review["source_url"],
                             "review_date": review["review_date"],
                             "rating": review["rating"],
+                            "review_text": dict(review_text_record),
                         }
                     ],
-                    "status": "NEEDS_REPRO",
+                    "matched_evidence": {
+                        "text": text,
+                        "start_offset": match_start,
+                        "end_offset": match_end,
+                        "source_text_sha256": source_text_sha256,
+                        "text_basis": text_basis,
+                        "is_raw_review_text": text_basis == "raw_review_text",
+                        **(
+                            {"raw_text_sha256": source_text_sha256}
+                            if text_basis == "raw_review_text"
+                            else {
+                                "normalized_text_sha256": source_text_sha256,
+                                "source_raw_text_sha256": review[
+                                    "source_raw_text_sha256"
+                                ],
+                            }
+                        ),
+                        "evidence_id": review["evidence_id"],
+                        "source_review_id": review["source_review_id"],
+                    },
+                    "status": "NEEDS_REPRO_AND_ENVIRONMENT_CONFIRMATION",
                     "information_gaps": [*information_gaps, "observable_symptom"],
                     "environment": dict(environment),
                     "reproduction_draft": {
                         "preconditions": ["관찰 증상과 여정 단계를 사람이 명확히 한다"],
-                        "steps": ["원문 증거를 다시 읽고 추가 재현 정보를 요청한다"],
-                        "expected": "관찰 가능한 단일 증상으로 정리된다",
+                        "steps": list(spec["steps"]),
+                        "expected": "관찰 가능한 단일 증상과 사람이 정한 기대값으로 정리된다",
                         "observed": SYMPTOM_STATEMENTS["unclassified_observation"],
                         "human_validation_required": True,
                     },
@@ -316,11 +616,14 @@ def build_report(payload: dict) -> dict:
     derived_evidence_ids = {
         evidence_id for ticket in tickets for evidence_id in ticket["evidence_ids"]
     }
+    known_statuses = (
+        "READY_FOR_REPRO",
+        "TEST_SCENARIO_ONLY",
+        "NEEDS_REPRO_AND_ENVIRONMENT_CONFIRMATION",
+    )
     status_counts = {
-        "READY_FOR_REPRO": sum(
-            ticket["status"] == "READY_FOR_REPRO" for ticket in tickets
-        ),
-        "NEEDS_REPRO": sum(ticket["status"] == "NEEDS_REPRO" for ticket in tickets),
+        status: sum(ticket["status"] == status for ticket in tickets)
+        for status in known_statuses
     }
     return {
         "schema_version": "1.0",
@@ -385,4 +688,3 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

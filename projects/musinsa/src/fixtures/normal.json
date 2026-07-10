@@ -13,15 +13,18 @@
       "rating": 1,
       "locale": "ko-KR",
       "title": "품절 표시 오류와 전반적인 앱 성능 문제 개선 필요",
-      "text": "상품 페이지에서 정상 판매 상품도 품절로 표시되고 결제가 느리며 목록과 상세 화면 전환이 버벅이고 휴대폰 발열도 심합니다.",
-      "text_provenance": "normalized_observation_from_public_review",
+      "raw_review_text": "상품 페이지에 들어가면 정상 판매 중인 상품까지 전부 품절로 표시되는 오류가 반복적으로 발생합니다. 결제 과정은 지나치게 느리고, 상품 목록과 상세 페이지를 오가는 기본적인 화면 전환조차 버벅거릴 정도로 최적화가 부족합니다. 사용 중에는 휴대폰 발열도 심하게 올라와 단순한 일시적 불편이 아니라 앱 성능과 안정성 전반에 구조적인 문제가 있는 것처럼 느껴집니다. 상품 조회, 화면 전환, 결제처럼 가장 기본적인 기능부터 안정적으로 동작할 수 있도록 서버 증설과 앱 최적화를 포함한 근본적인 개선이 필요합니다.",
+      "raw_text_sha256": "1d1f852292533e09fac0233a57c4023f02fffbbc332008ac159351b630b2ee8b",
       "environment": {
         "device": "TEST-iPhone-15",
         "os_version": "TEST-iOS-18.5",
         "app_version": "4.81.0",
-        "provenance": "synthetic_test_context"
+        "provenance": {
+          "device": "synthetic_test_context",
+          "os_version": "synthetic_test_context",
+          "app_version": "store_metadata"
+        }
       }
     }
   ]
 }
-

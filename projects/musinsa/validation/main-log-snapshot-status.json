@@ -1,0 +1,9 @@
+﻿{
+    "session_id":  "019f4be2-94a4-71b2-a106-c1da42bd642a",
+    "source_path":  "C:\\Users\\letgo\\.codex\\sessions\\2026\\07\\10\\rollout-2026-07-10T20-56-11-019f4be2-94a4-71b2-a106-c1da42bd642a.jsonl",
+    "source_bytes":  2817344,
+    "snapshot_path":  "C:\\Users\\letgo\\Documents\\인재전쟁\\final-workspaces\\musinsa\\logs\\root-session-019f4be2-94a4-71b2-a106-c1da42bd642a.jsonl",
+    "snapshot_bytes":  2776620,
+    "snapshot_is_complete":  false,
+    "reason":  "Main thread has not ended; run finalize-musinsa.ps1 after completion."
+}

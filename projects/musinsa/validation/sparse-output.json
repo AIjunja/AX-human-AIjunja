@@ -25,10 +25,26 @@
           "source": "google_play",
           "source_url": "https://play.google.com/store/apps/details?id=com.musinsa.store&hl=ko&gl=KR",
           "review_date": "2026-06-26T16:27:36+00:00",
-          "rating": 1
+          "rating": 1,
+          "review_text": {
+            "text_basis": "raw_review_text",
+            "raw_review_text": "앱을 뭐 어떻게 만들었으면 페이 결제하러 다른데 나갔다오면 튕겨서 지멋대로 다시시작하고있냐 프로모션은 다 페이로 붙여놓고 개빡쳐서 다시 들어가면 프로모션 이미 썼다면서 없애두고 결제는 안되어있고 ㅋㅋㅋㅋ 쇼핑몰이 결제를 가장 어렵게 만들어 놓으면 뭐하러 씀? 배달앱보다도 결제화면이 불안정한건 뭔 경우임? 바이럴에 돈좀 그만 쳐 바르고 앱이랑 홈페이지 개선좀 해라",
+            "raw_text_sha256": "3fd550f6e1b79d6218ec131c63fee78760911dc9beed734156d0f2a219b4f603"
+          }
         }
       ],
-      "status": "NEEDS_REPRO",
+      "matched_evidence": {
+        "text": "나갔다오면 튕겨서",
+        "start_offset": 27,
+        "end_offset": 36,
+        "source_text_sha256": "3fd550f6e1b79d6218ec131c63fee78760911dc9beed734156d0f2a219b4f603",
+        "text_basis": "raw_review_text",
+        "is_raw_review_text": true,
+        "raw_text_sha256": "3fd550f6e1b79d6218ec131c63fee78760911dc9beed734156d0f2a219b4f603",
+        "evidence_id": "GOOGLEPLAY-f039a383-fee3-41dd-a7f8-e0e24112cfb0",
+        "source_review_id": "f039a383-fee3-41dd-a7f8-e0e24112cfb0"
+      },
+      "status": "NEEDS_REPRO_AND_ENVIRONMENT_CONFIRMATION",
       "information_gaps": [
         "device",
         "os_version",
@@ -40,11 +56,11 @@
           "테스트 계정·상품·데이터를 사람이 확정한다"
         ],
         "steps": [
-          "checkout 여정 단계에 진입한다",
-          "리뷰에 보고된 사용자 동작을 수행한다",
-          "실제 결과와 화면·시각·환경을 기록한다"
+          "외부 결제 진입 전 주문·결제·프로모션 상태를 기록한다",
+          "외부 결제 화면에 진입한 뒤 앱으로 복귀한다",
+          "복귀 직후 앱 화면과 주문·결제·프로모션 상태를 비교 기록한다"
         ],
-        "expected": "정의된 서비스 상태와 사용자 흐름이 유지된다",
+        "expected": "사람이 입력한 정책·임계값과 실제 관찰을 비교한다",
         "observed": "외부 결제 화면에서 돌아온 뒤 앱 흐름이 다시 시작된다고 보고됨",
         "human_validation_required": true
       },
@@ -77,10 +93,26 @@
           "source": "google_play",
           "source_url": "https://play.google.com/store/apps/details?id=com.musinsa.store&hl=ko&gl=KR",
           "review_date": "2026-06-26T16:27:36+00:00",
-          "rating": 1
+          "rating": 1,
+          "review_text": {
+            "text_basis": "raw_review_text",
+            "raw_review_text": "앱을 뭐 어떻게 만들었으면 페이 결제하러 다른데 나갔다오면 튕겨서 지멋대로 다시시작하고있냐 프로모션은 다 페이로 붙여놓고 개빡쳐서 다시 들어가면 프로모션 이미 썼다면서 없애두고 결제는 안되어있고 ㅋㅋㅋㅋ 쇼핑몰이 결제를 가장 어렵게 만들어 놓으면 뭐하러 씀? 배달앱보다도 결제화면이 불안정한건 뭔 경우임? 바이럴에 돈좀 그만 쳐 바르고 앱이랑 홈페이지 개선좀 해라",
+            "raw_text_sha256": "3fd550f6e1b79d6218ec131c63fee78760911dc9beed734156d0f2a219b4f603"
+          }
         }
       ],
-      "status": "NEEDS_REPRO",
+      "matched_evidence": {
+        "text": "결제는 안되어",
+        "start_offset": 99,
+        "end_offset": 106,
+        "source_text_sha256": "3fd550f6e1b79d6218ec131c63fee78760911dc9beed734156d0f2a219b4f603",
+        "text_basis": "raw_review_text",
+        "is_raw_review_text": true,
+        "raw_text_sha256": "3fd550f6e1b79d6218ec131c63fee78760911dc9beed734156d0f2a219b4f603",
+        "evidence_id": "GOOGLEPLAY-f039a383-fee3-41dd-a7f8-e0e24112cfb0",
+        "source_review_id": "f039a383-fee3-41dd-a7f8-e0e24112cfb0"
+      },
+      "status": "NEEDS_REPRO_AND_ENVIRONMENT_CONFIRMATION",
       "information_gaps": [
         "device",
         "os_version",
@@ -92,11 +124,11 @@
           "테스트 계정·상품·데이터를 사람이 확정한다"
         ],
         "steps": [
-          "checkout 여정 단계에 진입한다",
-          "리뷰에 보고된 사용자 동작을 수행한다",
-          "실제 결과와 화면·시각·환경을 기록한다"
+          "결제 전 주문·결제 상태를 기록한다",
+          "문제가 보고된 결제 흐름을 수행한다",
+          "복귀 후 주문·결제 상태와 결제 사업자 응답을 함께 기록한다"
         ],
-        "expected": "정의된 서비스 상태와 사용자 흐름이 유지된다",
+        "expected": "사람이 입력한 정책·임계값과 실제 관찰을 비교한다",
         "observed": "결제 완료 상태를 확인할 수 없다고 보고됨",
         "human_validation_required": true
       },
@@ -129,10 +161,26 @@
           "source": "google_play",
           "source_url": "https://play.google.com/store/apps/details?id=com.musinsa.store&hl=ko&gl=KR",
           "review_date": "2026-06-26T16:27:36+00:00",
-          "rating": 1
+          "rating": 1,
+          "review_text": {
+            "text_basis": "raw_review_text",
+            "raw_review_text": "앱을 뭐 어떻게 만들었으면 페이 결제하러 다른데 나갔다오면 튕겨서 지멋대로 다시시작하고있냐 프로모션은 다 페이로 붙여놓고 개빡쳐서 다시 들어가면 프로모션 이미 썼다면서 없애두고 결제는 안되어있고 ㅋㅋㅋㅋ 쇼핑몰이 결제를 가장 어렵게 만들어 놓으면 뭐하러 씀? 배달앱보다도 결제화면이 불안정한건 뭔 경우임? 바이럴에 돈좀 그만 쳐 바르고 앱이랑 홈페이지 개선좀 해라",
+            "raw_text_sha256": "3fd550f6e1b79d6218ec131c63fee78760911dc9beed734156d0f2a219b4f603"
+          }
         }
       ],
-      "status": "NEEDS_REPRO",
+      "matched_evidence": {
+        "text": "프로모션 이미 썼다",
+        "start_offset": 81,
+        "end_offset": 91,
+        "source_text_sha256": "3fd550f6e1b79d6218ec131c63fee78760911dc9beed734156d0f2a219b4f603",
+        "text_basis": "raw_review_text",
+        "is_raw_review_text": true,
+        "raw_text_sha256": "3fd550f6e1b79d6218ec131c63fee78760911dc9beed734156d0f2a219b4f603",
+        "evidence_id": "GOOGLEPLAY-f039a383-fee3-41dd-a7f8-e0e24112cfb0",
+        "source_review_id": "f039a383-fee3-41dd-a7f8-e0e24112cfb0"
+      },
+      "status": "NEEDS_REPRO_AND_ENVIRONMENT_CONFIRMATION",
       "information_gaps": [
         "device",
         "os_version",
@@ -144,11 +192,11 @@
           "테스트 계정·상품·데이터를 사람이 확정한다"
         ],
         "steps": [
-          "checkout 여정 단계에 진입한다",
-          "리뷰에 보고된 사용자 동작을 수행한다",
-          "실제 결과와 화면·시각·환경을 기록한다"
+          "결제 전 프로모션 사용 상태를 기록한다",
+          "미완료 결제 흐름을 수행한다",
+          "결제 미완료 상태와 프로모션 사용 상태를 함께 확인한다"
         ],
-        "expected": "정의된 서비스 상태와 사용자 흐름이 유지된다",
+        "expected": "사람이 입력한 정책·임계값과 실제 관찰을 비교한다",
         "observed": "미완료 결제와 프로모션 사용 상태가 일치하지 않는다고 보고됨",
         "human_validation_required": true
       },
@@ -172,13 +220,25 @@
         "GOOGLEPLAY-f039a383-fee3-41dd-a7f8-e0e24112cfb0"
       ],
       "preconditions": [
-        "테스트 계정과 대상 상품을 사람이 확정한다"
+        "테스트 계정·상품·데이터와 환경을 사람이 확정한다"
       ],
       "steps": [
-        "해당 여정 단계에 진입한다",
-        "관찰 증상과 동일한 사용자 동작을 수행한다"
+        "외부 결제 진입 전 주문·결제·프로모션 상태를 기록한다",
+        "외부 결제 화면에 진입한 뒤 앱으로 복귀한다",
+        "복귀 직후 앱 화면과 주문·결제·프로모션 상태를 비교 기록한다"
       ],
-      "oracle": "관찰 증상이 발생하지 않고 기대 상태가 유지되는지 확인한다",
+      "oracle_type": "external_payment_return_state_continuity",
+      "required_observations": [
+        "pre_external_payment_state",
+        "return_screen_state",
+        "order_state_after_return",
+        "payment_state_after_return",
+        "promotion_state_after_return"
+      ],
+      "human_defined_thresholds": [
+        "외부 결제 복귀 시 기대 화면",
+        "주문·결제·프로모션 상태 보존 정책"
+      ],
       "automation_candidate": null,
       "automation_assessment": "HUMAN_ASSESSMENT_REQUIRED",
       "human_review_required": true
@@ -192,13 +252,24 @@
         "GOOGLEPLAY-f039a383-fee3-41dd-a7f8-e0e24112cfb0"
       ],
       "preconditions": [
-        "테스트 계정과 대상 상품을 사람이 확정한다"
+        "테스트 계정·상품·데이터와 환경을 사람이 확정한다"
       ],
       "steps": [
-        "해당 여정 단계에 진입한다",
-        "관찰 증상과 동일한 사용자 동작을 수행한다"
+        "결제 전 주문·결제 상태를 기록한다",
+        "문제가 보고된 결제 흐름을 수행한다",
+        "복귀 후 주문·결제 상태와 결제 사업자 응답을 함께 기록한다"
       ],
-      "oracle": "관찰 증상이 발생하지 않고 기대 상태가 유지되는지 확인한다",
+      "oracle_type": "payment_order_state_consistency",
+      "required_observations": [
+        "payment_provider_response",
+        "order_state",
+        "payment_state",
+        "displayed_completion_state"
+      ],
+      "human_defined_thresholds": [
+        "결제 성공·실패 판정 기준",
+        "주문·결제 상태의 기대 조합"
+      ],
       "automation_candidate": null,
       "automation_assessment": "HUMAN_ASSESSMENT_REQUIRED",
       "human_review_required": true
@@ -212,13 +283,23 @@
         "GOOGLEPLAY-f039a383-fee3-41dd-a7f8-e0e24112cfb0"
       ],
       "preconditions": [
-        "테스트 계정과 대상 상품을 사람이 확정한다"
+        "테스트 계정·상품·데이터와 환경을 사람이 확정한다"
       ],
       "steps": [
-        "해당 여정 단계에 진입한다",
-        "관찰 증상과 동일한 사용자 동작을 수행한다"
+        "결제 전 프로모션 사용 상태를 기록한다",
+        "미완료 결제 흐름을 수행한다",
+        "결제 미완료 상태와 프로모션 사용 상태를 함께 확인한다"
       ],
-      "oracle": "관찰 증상이 발생하지 않고 기대 상태가 유지되는지 확인한다",
+      "oracle_type": "payment_promotion_state_consistency",
+      "required_observations": [
+        "payment_completion_state",
+        "promotion_usage_state",
+        "promotion_restoration_state"
+      ],
+      "human_defined_thresholds": [
+        "미완료 결제의 판정 기준",
+        "실패·취소 시 프로모션 복원 정책"
+      ],
       "automation_candidate": null,
       "automation_assessment": "HUMAN_ASSESSMENT_REQUIRED",
       "human_review_required": true
@@ -239,7 +320,7 @@
       ]
     }
   },
-  "stable_fields_sha256": "7abf36a682d0351a400ea7cadef9cdb7b32ecf7a195bbef33e221c1b44af907e",
+  "stable_fields_sha256": "c8e678c9ce979fb6cf63ac01121925ed72f272900517a33062304211884a1df5",
   "summary": {
     "input_reviews": 1,
     "input_evidence_ids": 1,
@@ -247,7 +328,8 @@
     "regression_tests": 3,
     "status_counts": {
       "READY_FOR_REPRO": 0,
-      "NEEDS_REPRO": 3
+      "TEST_SCENARIO_ONLY": 0,
+      "NEEDS_REPRO_AND_ENVIRONMENT_CONFIRMATION": 3
     },
     "evidence_preservation_rate": 1.0
   },

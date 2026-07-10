@@ -1,10 +1,10 @@
 # 무신사 Review-to-Repro QA
 
-무신사 공개 앱 리뷰를 원본 evidence ID와 URL이 연결된 재현 QA 티켓 및 회귀 테스트 초안으로 바꾸는 Codex 플러그인입니다. 리뷰는 관찰 신호일 뿐 장애 원인이나 전체 고객의 발생률을 입증하지 않으므로, `root_cause`와 사용자 비율을 생성하지 않습니다.
+무신사 공개 앱 리뷰를 원본 evidence ID·정확한 일치 구절과 연결하고, 재현 준비도와 정보 공백이 표시된 QA 티켓 및 증상별 회귀 테스트 초안으로 바꾸는 Codex 플러그인입니다. 리뷰는 관찰 신호일 뿐 장애 원인이나 전체 고객의 발생률을 입증하지 않으므로, `root_cause`와 사용자 비율을 생성하지 않습니다.
 
 ## 공개 문제와 실제 사용자
 
-**문제 정의:** 무신사 `Senior CX Quality Specialist`가 공개 앱 리뷰에서 반복·구조적 VOC 개선 과제를 찾는 상황에서, 한 리뷰에 여러 여정의 증상이 섞이고 기기·OS·앱 버전이 빠져 있어 원본 근거가 보존된 재현 QA 티켓과 회귀 테스트 초안을 만들기 어려운 문제입니다.
+**문제 정의:** 무신사 `Senior CX Quality Specialist`가 공개 앱 리뷰에서 반복·구조적 VOC 개선 과제를 찾는 상황에서, 한 리뷰에 여러 여정의 증상이 섞이고 기기·OS·앱 버전과 그 출처가 빠져 있어 원본 근거와 재현 준비도가 표시된 QA 티켓·테스트 초안을 만들기 어려운 문제입니다.
 
 무신사 공식 채용 공고는 이 역할이 VOC에서 반복·구조적 문제를 도출하고, 서비스기획·물류·상품 등과 개선 과제를 수행하며, AI/자동화 기반 QA를 검토한다고 설명합니다. 무신사 기술 블로그도 앱 리뷰 수집·이슈 분류·테스트 케이스 설계와 단위 자동화 테스트를 QA 업무로 소개합니다. 공개 Apple 리뷰 `14280470370`은 한 문장에 품절 표시, 결제 지연, 목록·상세 전환 지연, 발열을 함께 보고합니다. 이 사례는 문제의 존재를 보여 주는 신호이지 전체 사용자 비율·실제 장애·원인을 입증하지는 않습니다.
 
@@ -40,35 +40,37 @@ python -X utf8 src/scripts/review_to_repro.py src/fixtures/invalid.json
 
 ## 입력과 작동 절차
 
-입력은 UTF-8 JSON이며 `schema_version`, `sample_scope`, `reviews[]`를 포함합니다. 각 리뷰에는 `evidence_id`, 원본 review ID, 공식 스토어 URL, 날짜, 별점, 본문, `environment`가 필요합니다. `environment`의 device·OS·app version은 비어 있을 수 있습니다.
+입력은 UTF-8 JSON이며 `schema_version`, `sample_scope`, `reviews[]`를 포함합니다. 각 리뷰에는 `evidence_id`, 원본 review ID, 공식 스토어 URL, 날짜, 별점, `environment`가 필요합니다. 원문을 확보했다면 `raw_review_text`와 `raw_text_sha256`을 사용합니다. 정규화 문장만 있다면 `normalized_observation`, `normalization_method`, `source_raw_text_sha256`을 분리해 원문으로 오인되지 않게 합니다.
 
 1. Apple/Google 공식 호스트와 무신사 앱 ID·패키지를 검증합니다.
 2. 한 리뷰의 서로 다른 관찰 증상을 검색·목록·상품상세·장바구니·결제 등 독립 티켓으로 분리합니다.
-3. evidence ID, 원본 review ID, URL, 날짜, 별점을 각 티켓에 보존합니다.
-4. device·OS·app version 중 하나라도 빠지면 `NEEDS_REPRO`와 정보 공백을 출력합니다.
+3. 정확히 일치한 구절, 시작·끝 문자 offset, 텍스트 SHA-256, evidence ID와 원본 review ID를 `matched_evidence`에 보존합니다.
+4. device·OS·app version과 각 필드의 provenance를 확인합니다. 값과 provenance가 모두 신뢰 출처이면 `READY_FOR_REPRO`, 합성값이 있으면 `TEST_SCENARIO_ONLY`, 누락·미확인 출처가 있으면 `NEEDS_REPRO_AND_ENVIRONMENT_CONFIRMATION`입니다.
 5. 관찰 증상만 기록하고 리뷰어의 원인 추측은 `NOT_GENERATED_FROM_REVIEW`로 분리합니다.
-6. 각 티켓에 사람이 보완할 재현 절차와 같은 evidence ID의 회귀 테스트 초안을 만듭니다.
+6. 각 티켓에 증상별 재현 절차와 같은 evidence ID의 회귀 테스트 초안을 만듭니다. 수치 임계값과 기대 정책은 만들지 않고 `human_defined_thresholds`에 사람이 입력할 항목을 남깁니다.
 
 ## 출력 예시
 
-정상 fixture의 한 리뷰는 다음 네 티켓과 네 회귀 테스트 초안으로 분리됩니다.
+정상 fixture의 공개 리뷰 한 건은 다음 네 티켓과 네 회귀 테스트 초안으로 분리됩니다. fixture의 device·OS는 합성이므로 네 티켓 모두 `TEST_SCENARIO_ONLY`이며 실제 환경 확인 전에는 재현 준비 완료로 보지 않습니다.
 
 - `detail / sold_out_mislabel`
 - `checkout / checkout_latency`
 - `listing_detail / navigation_lag`
 - `cross_cutting_performance / device_overheating`
 
-각 티켓은 `ticket_id`, `journey_stage`, `observed_symptom`, `status`, `evidence_refs`, `information_gaps`, `reproduction_draft`, `human_decisions`, `cause_handling`을 포함합니다. 출력에는 evidence 보존율과 순서 독립적 `stable_fields_sha256`도 포함됩니다.
+각 티켓은 `ticket_id`, `journey_stage`, `observed_symptom`, `status`, `matched_evidence`, `evidence_refs`, `information_gaps`, `reproduction_draft`, `human_decisions`, `cause_handling`을 포함합니다. 회귀 테스트는 증상별 `oracle_type`, `required_observations`, `human_defined_thresholds`를 가집니다. 출력에는 evidence 보존율과 순서 독립적 `stable_fields_sha256`도 포함됩니다.
 
 ## 판단 기준과 사람의 역할
 
-도구는 문자열 규칙으로 관찰 증상을 분리하지만 심각도, 사업 우선순위, 중복 확정, 실제 재현 결과, 정책 위반, 자동화 가능성, 구체적인 테스트 oracle은 정하지 않습니다. QA/CX 담당자가 실제 계정·상품·테스트 데이터·기대 상태를 제공하고 최종 판단합니다.
+도구는 문자열 규칙으로 관찰 증상을 분리하고 증상별 관찰 계약을 만들지만 심각도, 사업 우선순위, 중복 확정, 실제 재현 결과, 정책 위반, 자동화 가능성, 수치 임계값과 기대 정책은 정하지 않습니다. QA/CX 담당자가 실제 계정·상품·테스트 데이터·기대 상태를 제공하고 최종 판단합니다.
 
 ## KPI
 
 - 입력 evidence ID 보존율 100%
 - 복수 증상 독립 티켓 분리
-- 환경 누락 티켓의 `NEEDS_REPRO` 적용률 100%
+- 합성 환경의 `READY_FOR_REPRO` 반환 0건
+- 누락·출처 미확인 환경의 `NEEDS_REPRO_AND_ENVIRONMENT_CONFIRMATION` 적용률 100%
+- `matched_evidence`의 원문 substring·offset·SHA-256 일치율 100%
 - `root_cause` 및 사용자 발생률 추정 필드 0건
 - invalid 입력의 결정론적 거부
 - 동일 입력의 안정 필드 해시 재현
@@ -77,14 +79,14 @@ python -X utf8 src/scripts/review_to_repro.py src/fixtures/invalid.json
 
 2026-07-10에 다음을 실제 실행했습니다.
 
-- 자동 테스트 14개 통과, Python 문법 검사 통과
+- 기존 14개와 신규 6개, 총 20개 자동 테스트 통과, Python 문법 검사 통과
 - 공식 plugin validator와 SKILL.md validator 통과
-- 정상 fixture: 4 tickets / 4 regression tests / evidence 보존율 1.0
-- sparse fixture: 3 tickets 모두 `NEEDS_REPRO`; device·OS·app version 공백 표기
+- 정상 fixture: 4 tickets / 4 regression tests / evidence 보존율 1.0 / 합성 환경으로 4건 `TEST_SCENARIO_ONLY`
+- sparse fixture: 3 tickets 모두 `NEEDS_REPRO_AND_ENVIRONMENT_CONFIRMATION`; device·OS·app version 공백 표기
 - invalid fixture: `INVALID_INPUT`, exit code 2
 - 고유 local marketplace `axwar-musinsa-final` 설치, installed/enabled 확인
 - fresh Codex 세션에서 설치 캐시의 실제 `$musinsa-review-to-repro` workflow로 정상 fixture 처리
-- fresh 결과: 4 tickets / 4 regression tests / evidence 보존율 1.0 / `root_cause` 없음
+- fresh 결과: 4 tickets / 4 regression tests / 4건 `TEST_SCENARIO_ONLY` / matched substring·증상별 oracle 확인 / `root_cause` 없음
 
 ## 공개 출처
 
@@ -102,7 +104,8 @@ python -X utf8 src/scripts/review_to_repro.py src/fixtures/invalid.json
 ## 한계
 
 - 리뷰는 작성자의 보고이며 실제 장애·원인·영향을 입증하지 않습니다.
-- fixture의 `TEST-*` 환경은 재현성 확인용 합성값이며 공개 리뷰 사실이 아닙니다.
-- 규칙 밖 표현은 `unknown / NEEDS_REPRO`로 남깁니다.
+- fixture의 `TEST-*` 환경은 테스트 시나리오용 합성값이며 공개 리뷰 사실이 아닙니다. 값이 채워져도 `TEST_SCENARIO_ONLY`입니다.
+- 규칙 밖 표현은 `unknown / NEEDS_REPRO_AND_ENVIRONMENT_CONFIRMATION`으로 남깁니다.
 - 실제 무신사 앱 재현, 내부 티켓 생성, 매출 영향, 전체 고객 발생률은 검증하지 않았습니다.
+- 제출 logs의 메인 작업 JSONL은 종료 전 snapshot일 수 있으며 전체 원본이라고 주장하지 않습니다. 종료 후 `finalize-musinsa.ps1`로 세션 `019f4be2-94a4-71b2-a106-c1da42bd642a`의 완결 원본을 교체·검증하고 ZIP과 GitHub 해시를 갱신해야 합니다.
 - 공개 페이지는 변경·삭제될 수 있으며 검증 시점 이후 내용이 달라질 수 있습니다.
