@@ -1,0 +1,116 @@
+{
+  "evidence_packet": {
+    "sources": [
+      {
+        "source_id": "SRC-CH-ALF-2025",
+        "title": "우리 채널 맞춤 비서, AI 어시스턴트를 고용해 보세요",
+        "url": "https://channel.io/kr/blog/articles/ai-assistant-alf-1ba879b9",
+        "retrieved_at": "2026-07-10T13:04:43Z",
+        "source_text": "AI 어시스턴트는 FAQ와 아티클을 기반으로 답변합니다. 출처가 표시되지 않은 답변은 공식 문서로 추가 확인해야 합니다.",
+        "evidence": [
+          {
+            "evidence_id": "EV-01-001",
+            "quote": "AI 어시스턴트는 FAQ와 아티클을 기반으로 답변합니다.",
+            "location": {
+              "start": 0,
+              "end": 31,
+              "unit": "utf8-character"
+            }
+          },
+          {
+            "evidence_id": "EV-01-002",
+            "quote": "출처가 표시되지 않은 답변은 공식 문서로 추가 확인해야 합니다.",
+            "location": {
+              "start": 32,
+              "end": 67,
+              "unit": "utf8-character"
+            }
+          }
+        ]
+      }
+    ],
+    "answers": [
+      {
+        "answer_id": "DRAFT-CHANNEL-001",
+        "claims": [
+          {
+            "claim_id": "CLM-001",
+            "text": "AI 어시스턴트는 FAQ와 아티클을 기반으로 답변합니다.",
+            "evidence_ids": [
+              "EV-01-001"
+            ]
+          },
+          {
+            "claim_id": "CLM-002",
+            "text": "출처가 표시되지 않은 답변은 공식 문서로 추가 확인해야 합니다.",
+            "evidence_ids": [
+              "EV-01-002"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "report": {
+    "status": "READY",
+    "summary": {
+      "claims": 2,
+      "supported": 2,
+      "human_review": 0,
+      "needs_evidence": 0
+    },
+    "claim_results": [
+      {
+        "answer_id": "DRAFT-CHANNEL-001",
+        "claim_id": "CLM-001",
+        "text": "AI 어시스턴트는 FAQ와 아티클을 기반으로 답변합니다.",
+        "decision": "SUPPORTED",
+        "evidence_ids": [
+          "EV-01-001"
+        ],
+        "direct_evidence_ids": [
+          "EV-01-001"
+        ],
+        "source_ids": [
+          "SRC-CH-ALF-2025"
+        ],
+        "source_urls": [
+          "https://channel.io/kr/blog/articles/ai-assistant-alf-1ba879b9"
+        ],
+        "risk_flags": [],
+        "prohibited_inference": false,
+        "reasons": []
+      },
+      {
+        "answer_id": "DRAFT-CHANNEL-001",
+        "claim_id": "CLM-002",
+        "text": "출처가 표시되지 않은 답변은 공식 문서로 추가 확인해야 합니다.",
+        "decision": "SUPPORTED",
+        "evidence_ids": [
+          "EV-01-002"
+        ],
+        "direct_evidence_ids": [
+          "EV-01-002"
+        ],
+        "source_ids": [
+          "SRC-CH-ALF-2025"
+        ],
+        "source_urls": [
+          "https://channel.io/kr/blog/articles/ai-assistant-alf-1ba879b9"
+        ],
+        "risk_flags": [],
+        "prohibited_inference": false,
+        "reasons": []
+      }
+    ],
+    "publishable_answers": [
+      {
+        "answer_id": "DRAFT-CHANNEL-001",
+        "text": "AI 어시스턴트는 FAQ와 아티클을 기반으로 답변합니다. [EV-01-001 | SRC-CH-ALF-2025] 출처가 표시되지 않은 답변은 공식 문서로 추가 확인해야 합니다. [EV-01-002 | SRC-CH-ALF-2025]"
+      }
+    ],
+    "required_actions": [],
+    "human_review_actions": [],
+    "safety_note": "정확한 인용의 직접 일치만 자동 지지하며 실제 서비스 상태·원인·복구·성과를 독자적으로 판정하지 않습니다."
+  }
+}

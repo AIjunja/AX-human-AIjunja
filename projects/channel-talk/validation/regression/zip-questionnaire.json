@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "questionnairePath": "C:\\Users\\letgo\\Documents\\인재전쟁\\final-questionnaires\\channel-talk.json",
+  "submissionRoot": "C:\\Users\\letgo\\Documents\\인재전쟁\\final-evidence-channel-talk\\zip-v2-unpacked",
+  "company": "채널톡",
+  "pluginName": "channel-answer-evidence-gate",
+  "sourceUrl": "https://channel.io/kr/blog/articles/ai-assistant-alf-1ba879b9",
+  "characterCounts": {
+    "q1": 118,
+    "q2": 345,
+    "q3": 486,
+    "q4": 369,
+    "q5": 448
+  },
+  "characterLimits": {
+    "q1": 800,
+    "q2": 800,
+    "q3": 1000,
+    "q4": 800,
+    "q5": 800
+  },
+  "findings": []
+}

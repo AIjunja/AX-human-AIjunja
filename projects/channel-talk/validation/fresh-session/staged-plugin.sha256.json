@@ -1,0 +1,11 @@
+{
+  ".codex-plugin/plugin.json": "bcdc5bb9e788ae36be1e194e2f080317584a40850ba807eeaae6565ca234c5c6",
+  "fixtures/invalid.json": "bc1f2503f67afe7eac5f3817faee3583817aa694ec1c880bdebf561e43c4c0a8",
+  "fixtures/missing-evidence.json": "f52746b26451a5587babe40db4bb851fc8de85fb0e9c9953b48d191654e945e8",
+  "fixtures/raw-draft.json": "978ab0822120010db7f3bd9474efff24e15c73d1fb6c496766041c55ef26d85e",
+  "fixtures/valid.json": "8dfacb64078ae7287eaa94a4c5044d8e6e69aefc31a92efde312e93a05928966",
+  "scripts/audit_answers.py": "596cece47778c711ee069157afca7872ef218ad02bceb5570b4f08e9aae53ab0",
+  "scripts/finalize-channel-talk.ps1": "2d5128bc020728f89fcc84afa654a861d8f5a1b199dfe3a6b0b7bc9bc6608a9a",
+  "skills/audit-channel-answers/SKILL.md": "65490939fc704f18103946e7870fd7354ec85742edd029612ffce4510f3e25c9",
+  "tests/test_audit_answers.py": "127b3d44260a814811bb5615c7bfe920cd6d03cb5da8b761270fb3aa57f6e2dc"
+}

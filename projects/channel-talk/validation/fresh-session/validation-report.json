@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "submissionRoot": "C:\\Users\\letgo\\Documents\\인재전쟁\\final-evidence-channel-talk\\fresh-v2-pass\\20260710-225442\\submission-stage",
+  "pluginName": "channel-answer-evidence-gate",
+  "logFileCount": 2,
+  "fileHashes": {
+    "README.md": "756b3d84ac25470f604483ed46e1dd796a8b6da83319dc37f42ed19db8cb781d",
+    "logs/codex-current-task-raw.jsonl": "b44239de3d2140aa6cbc146e8590311a3cdedeb73b70ecff9ca52a196e231b13",
+    "logs/codex-smoke/rollout-2026-07-10T22-54-44-019f4c4f-2ae1-7480-82a4-55e677617639.jsonl": "a9a6ebeb059ca2b6259957c02bcb1502ddca4de2fb43b66c870b564c1c04a76c",
+    "src/.codex-plugin/plugin.json": "bcdc5bb9e788ae36be1e194e2f080317584a40850ba807eeaae6565ca234c5c6",
+    "src/fixtures/invalid.json": "bc1f2503f67afe7eac5f3817faee3583817aa694ec1c880bdebf561e43c4c0a8",
+    "src/fixtures/missing-evidence.json": "f52746b26451a5587babe40db4bb851fc8de85fb0e9c9953b48d191654e945e8",
+    "src/fixtures/raw-draft.json": "978ab0822120010db7f3bd9474efff24e15c73d1fb6c496766041c55ef26d85e",
+    "src/fixtures/valid.json": "8dfacb64078ae7287eaa94a4c5044d8e6e69aefc31a92efde312e93a05928966",
+    "src/scripts/audit_answers.py": "596cece47778c711ee069157afca7872ef218ad02bceb5570b4f08e9aae53ab0",
+    "src/scripts/finalize-channel-talk.ps1": "2d5128bc020728f89fcc84afa654a861d8f5a1b199dfe3a6b0b7bc9bc6608a9a",
+    "src/skills/audit-channel-answers/SKILL.md": "65490939fc704f18103946e7870fd7354ec85742edd029612ffce4510f3e25c9",
+    "src/tests/test_audit_answers.py": "127b3d44260a814811bb5615c7bfe920cd6d03cb5da8b761270fb3aa57f6e2dc"
+  },
+  "findings": []
+}

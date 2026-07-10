@@ -1,9 +1,0 @@
-{
-  ".codex-plugin/plugin.json": "5ac07b4c90e94f69988b9e5b96a2e56006c05912de52753f4b40baa66849a3b2",
-  "fixtures/invalid.json": "57b3f85d5bb7ca8f32108e40f42cd23f027e78b9c8b49a00e9598caf0c476dc7",
-  "fixtures/missing-evidence.json": "09d16a1a0b9f49e107699d35927aeaa57489d33daae959a45994418ed8be579c",
-  "fixtures/valid.json": "24dbb8a26f8c3f976e1b5cb8dea9e2c472dfd4140df0b988c3b59ff5f7f6d65a",
-  "scripts/audit_answers.py": "5ce0312de85aa9bce760e38c3fb807a5feb740d89480380998453976cf7e2ad8",
-  "skills/audit-channel-answers/SKILL.md": "63da8f43d952de438da47fc09fe6516d84000e3bed4cd634a6e12c72a7ab9c85",
-  "tests/test_audit_answers.py": "670f69bf9aec5109136e940ef2927a4d0eefadf04e68930028ba611640643f5f"
-}

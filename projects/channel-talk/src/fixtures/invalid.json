@@ -1,1 +1,1 @@
-{"sources": [{"source_id": "SRC-BAD", "title": "로컬 자료", "url": "http://localhost/private", "evidence": []}], "answers": []}
+{"sources": [{"source_id": "SRC-BAD", "title": "로컬 자료", "url": "https://10.0.0.1/private", "retrieved_at": "2026-07-10T13:00:00Z", "source_text": "비공개", "evidence": []}], "answers": [{"answer_id": "A", "claims": [{"claim_id": "C", "text": "비공개", "evidence_ids": []}]}]}

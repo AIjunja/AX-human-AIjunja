@@ -1,24 +1,33 @@
 ---
 name: audit-channel-answers
-description: 채널톡 고객사의 CX 운영자와 상담 관리자가 상담 답변 초안의 각 주장을 공개 근거에 연결하고, 근거 부족·출처 누락·장애 원인이나 복구 완료 같은 위험 추론을 발송 전에 차단할 때 사용한다. JSON 입력을 결정론적 검수 보고서로 변환해야 하는 요청에 사용한다.
+description: 채널톡 고객사의 CX 운영자와 상담 관리자가 답변 초안과 공식 source URL을 제공하면 주장을 자동 분리하고 정확 인용·위치가 담긴 evidence packet을 구성한 뒤 SUPPORTED, HUMAN_REVIEW, NEEDS_EVIDENCE로 발송 전 검수할 때 사용한다.
 ---
 
 # 상담 답변 근거 검수
 
-1. 사용자가 제공한 JSON 파일을 확인한다. `sources[]`에는 `source_id`, `title`, 공개 `https` URL, `evidence[]`가 필요하고, `answers[].claims[]`에는 `claim_id`, `text`, `evidence_ids[]`가 필요하다.
-2. 입력 파일을 임의로 보완하지 않는다. 누락되었으면 아래 스크립트의 `NEEDS_EVIDENCE` 또는 `INVALID_INPUT` 결과를 그대로 설명한다.
-3. 플러그인 루트에서 다음 명령을 실행한다.
+1. 사용자가 답변 초안과 공식 URL을 주면 URL을 열어 원문을 확인하고 `retrieved_at`, `source_text`를 포함한 raw workflow JSON을 만든다. 사용자가 `claim_id`나 `evidence_id`를 직접 작성하게 하지 않는다.
+2. 플러그인 루트에서 다음 명령을 실행한다.
 
 ```powershell
-python scripts/audit_answers.py <input.json> --output <report.json>
+python scripts/audit_answers.py <raw-draft.json> --output <workflow-report.json>
 ```
 
-4. `status`가 `READY`일 때만 `publishable_answers`를 발송 후보라고 제시한다. `NEEDS_EVIDENCE`이면 `required_actions`와 해당 `claim_id`를 먼저 보여준다. `INVALID_INPUT`이면 입력 오류만 고치도록 요청하고 추정 답변을 만들지 않는다.
-5. 모든 판단에서 `evidence_ids`, `source_ids`, `source_urls`를 보존한다. 리뷰 한 건을 전체 고객 비율, 서비스 전체 장애, 장애 원인, 복구 완료, 상담 성과로 일반화하지 않는다.
-6. `prohibited_inference`가 참인 주장은 근거 문구가 해당 결론을 명시적으로 포함할 때만 통과시킨다. 정보가 부족하면 `NEEDS_EVIDENCE`로 남긴다.
+3. 결과의 `evidence_packet`에서 자동 분리된 주장, 정확한 `quote`, 문자 기준 `location`, `source_id`, `content_sha256`을 확인한다.
+4. `report.claim_results`를 다음처럼 해석한다.
+   - `SUPPORTED`: 검증된 source_text의 정확한 인용에 주장 문장이 직접 포함된다.
+   - `HUMAN_REVIEW`: 관련 인용 후보는 있지만 의역이라 결정론적으로 같은 뜻인지 확정할 수 없다.
+   - `NEEDS_EVIDENCE`: 근거가 없거나 무관하거나, 전체 장애·원인·복구 완료 같은 고위험 결론을 직접 진술한 정확한 인용이 없다.
+5. `READY`일 때만 `publishable_answers`를 발송 후보로 제시한다. `HUMAN_REVIEW`는 담당자 확인 전 발송하지 않는다. `NEEDS_EVIDENCE`는 직접 인용을 추가하거나 결론을 삭제한다.
+6. 리뷰 한 건을 전체 고객 비율, 서비스 전체 장애, 장애 원인, 복구 완료, 상담 성과로 일반화하지 않는다.
 
-정상 예시는 `fixtures/valid.json`, 정보 부족 예시는 `fixtures/missing-evidence.json`, 잘못된 입력은 `fixtures/invalid.json`이다.
+사용자가 이미 evidence packet을 제공하면 동일 스크립트로 직접 검수한다. `source_text`가 있으면 모든 quote가 지정 위치에 실제로 존재해야 한다. source_text 없이 `content_sha256`만 있으면 자동 `SUPPORTED`로 판정하지 않는다.
 
 ## Fresh-session 검증
 
-프롬프트가 설치 검증용 최종 sentinel만 요구하면, 먼저 `python scripts/audit_answers.py fixtures/valid.json`을 실제 실행한다. 출력의 `status`가 `READY`이고 `EV-ALF-01`, `SRC-CH-ALF-2025`가 모두 보존된 경우에만 `CHANNEL_ANSWER_EVIDENCE_GATE_OK:v1`을 단독 출력한다. 실행하지 않았거나 조건이 다르면 sentinel을 출력하지 말고 실패 이유를 반환한다.
+설치 검증 요청에서는 `python scripts/audit_answers.py fixtures/raw-draft.json`을 실제 실행한다. 출력에서 자동 생성 claim 2개, evidence 2개, 두 결정이 모두 `SUPPORTED`, 최종 상태가 `READY`인지 확인한 뒤 다음 결과 요약만 출력한다.
+
+```text
+claim_count=2;evidence_count=2;decisions=SUPPORTED,SUPPORTED;status=READY
+```
+
+조건이 다르면 성공 요약을 출력하지 말고 실제 실패 결과를 반환한다.

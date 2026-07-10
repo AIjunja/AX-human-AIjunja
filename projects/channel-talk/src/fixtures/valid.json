@@ -3,9 +3,11 @@
     "source_id": "SRC-CH-ALF-2025",
     "title": "우리 채널 맞춤 비서, AI 어시스턴트를 고용해 보세요",
     "url": "https://channel.io/kr/blog/articles/ai-assistant-alf-1ba879b9",
+    "retrieved_at": "2026-07-10T13:04:43Z",
+    "source_text": "AI 어시스턴트는 등록된 FAQ와 아티클을 기반으로 답변합니다. 출처가 보이지 않는 답변은 공식 가이드로 한 번 더 확인하세요.",
     "evidence": [
-      {"evidence_id": "EV-ALF-01", "text": "AI 어시스턴트는 채널에 등록된 FAQ와 아티클을 기반으로 답변합니다."},
-      {"evidence_id": "EV-ALF-02", "text": "답변에 출처가 표시되지 않은 경우 공식 문서 또는 가이드로 추가 확인할 것을 권장합니다."}
+      {"evidence_id": "EV-ALF-01", "quote": "AI 어시스턴트는 등록된 FAQ와 아티클을 기반으로 답변합니다.", "location": {"start": 0, "end": 35}},
+      {"evidence_id": "EV-ALF-02", "quote": "출처가 보이지 않는 답변은 공식 가이드로 한 번 더 확인하세요.", "location": {"start": 36, "end": 71}}
     ]
   }],
   "answers": [{

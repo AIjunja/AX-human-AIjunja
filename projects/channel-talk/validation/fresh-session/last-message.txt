@@ -1,0 +1,1 @@
+claim_count=2;evidence_count=2;decisions=SUPPORTED,SUPPORTED;status=READY

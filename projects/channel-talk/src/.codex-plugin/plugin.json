@@ -1,25 +1,33 @@
 {
   "name": "channel-answer-evidence-gate",
-  "version": "1.0.0",
-  "description": "공개 근거에 연결되지 않은 상담 답변 주장을 발송 전에 차단하고 감사 가능한 검수 결과를 생성합니다.",
+  "version": "1.0.0+codex.20260710135433",
+  "description": "\uacf5\uac1c \uadfc\uac70\uc5d0 \uc5f0\uacb0\ub418\uc9c0 \uc54a\uc740 \uc0c1\ub2f4 \ub2f5\ubcc0 \uc8fc\uc7a5\uc744 \ubc1c\uc1a1 \uc804\uc5d0 \ucc28\ub2e8\ud558\uace0 \uac10\uc0ac \uac00\ub2a5\ud55c \uac80\uc218 \uacb0\uacfc\ub97c \uc0dd\uc131\ud569\ub2c8\ub2e4.",
   "author": {
     "name": "AIjunja",
     "url": "https://github.com/AIjunja"
   },
   "repository": "https://github.com/AIjunja/AX-human-AIjunja",
   "license": "MIT",
-  "keywords": ["channel-talk", "cx", "evidence", "support-qa"],
+  "keywords": [
+    "channel-talk",
+    "cx",
+    "evidence",
+    "support-qa"
+  ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Channel Answer Evidence Gate",
-    "shortDescription": "상담 답변의 주장과 공개 근거를 발송 전에 검수합니다.",
-    "longDescription": "CX 운영자가 상담 답변 초안의 각 주장을 evidence_id, source_id, 공개 HTTPS URL에 연결했는지 결정론적으로 검사하고 근거 부족 및 위험한 추론을 차단합니다.",
+    "shortDescription": "\uc0c1\ub2f4 \ub2f5\ubcc0\uc758 \uc8fc\uc7a5\uacfc \uacf5\uac1c \uadfc\uac70\ub97c \ubc1c\uc1a1 \uc804\uc5d0 \uac80\uc218\ud569\ub2c8\ub2e4.",
+    "longDescription": "CX \uc6b4\uc601\uc790\uac00 \uc0c1\ub2f4 \ub2f5\ubcc0 \ucd08\uc548\uc758 \uac01 \uc8fc\uc7a5\uc744 evidence_id, source_id, \uacf5\uac1c HTTPS URL\uc5d0 \uc5f0\uacb0\ud588\ub294\uc9c0 \uacb0\uc815\ub860\uc801\uc73c\ub85c \uac80\uc0ac\ud558\uace0 \uadfc\uac70 \ubd80\uc871 \ubc0f \uc704\ud5d8\ud55c \ucd94\ub860\uc744 \ucc28\ub2e8\ud569\ub2c8\ub2e4.",
     "developerName": "AIjunja",
     "category": "Productivity",
-    "capabilities": ["Analyze", "Write"],
+    "capabilities": [
+      "Analyze",
+      "Write"
+    ],
     "defaultPrompt": [
-      "상담 답변 초안을 공개 근거와 대조해 검수해 줘.",
-      "정보가 부족한 주장을 발송 전에 찾아 줘."
+      "\uc0c1\ub2f4 \ub2f5\ubcc0 \ucd08\uc548\uc744 \uacf5\uac1c \uadfc\uac70\uc640 \ub300\uc870\ud574 \uac80\uc218\ud574 \uc918.",
+      "\uc815\ubcf4\uac00 \ubd80\uc871\ud55c \uc8fc\uc7a5\uc744 \ubc1c\uc1a1 \uc804\uc5d0 \ucc3e\uc544 \uc918."
     ]
   }
 }

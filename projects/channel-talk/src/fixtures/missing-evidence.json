@@ -3,7 +3,9 @@
     "source_id": "SRC-STORE-REVIEW-01",
     "title": "Channel Talk App Store review",
     "url": "https://apps.apple.com/kr/app/id1088828788",
-    "evidence": [{"evidence_id": "EV-REVIEW-01", "text": "한 리뷰 작성자가 비밀번호 재설정 링크 문제를 보고했습니다."}]
+    "retrieved_at": "2026-07-10T13:04:44Z",
+    "source_text": "한 리뷰 작성자가 비밀번호 재설정 링크 문제를 보고했습니다.",
+    "evidence": [{"evidence_id": "EV-REVIEW-01", "quote": "한 리뷰 작성자가 비밀번호 재설정 링크 문제를 보고했습니다.", "location": {"start": 0, "end": 33}}]
   }],
   "answers": [{
     "answer_id": "ANS-002",
