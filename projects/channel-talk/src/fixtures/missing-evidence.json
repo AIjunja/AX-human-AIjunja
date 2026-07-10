@@ -1,0 +1,15 @@
+{
+  "sources": [{
+    "source_id": "SRC-STORE-REVIEW-01",
+    "title": "Channel Talk App Store review",
+    "url": "https://apps.apple.com/kr/app/id1088828788",
+    "evidence": [{"evidence_id": "EV-REVIEW-01", "text": "한 리뷰 작성자가 비밀번호 재설정 링크 문제를 보고했습니다."}]
+  }],
+  "answers": [{
+    "answer_id": "ANS-002",
+    "claims": [
+      {"claim_id": "CLM-003", "text": "현재 서비스 전체 장애의 원인은 인증 서버이며 복구 완료되었습니다.", "evidence_ids": ["EV-REVIEW-01"]},
+      {"claim_id": "CLM-004", "text": "모든 고객이 같은 문제를 겪고 있습니다.", "evidence_ids": []}
+    ]
+  }]
+}

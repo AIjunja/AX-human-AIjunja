@@ -1,0 +1,10 @@
+﻿{
+    "thread_id":  "019f4c1d-6a00-7972-9f01-a7e287402daa",
+    "source":  "C:\\Users\\letgo\\.codex\\sessions\\2026\\07\\10\\rollout-2026-07-10T22-00-27-019f4c1d-6a00-7972-9f01-a7e287402daa.jsonl",
+    "destination":  "C:\\Users\\letgo\\Documents\\인재전쟁\\final-workspaces\\channel-talk\\logs\\codex-current-task-raw.jsonl",
+    "source_sha256":  "444fbcb895c72f7b57d4f03cf2dacdeac65d10707f403d4926fb68f1d29de217",
+    "destination_sha256":  "444fbcb895c72f7b57d4f03cf2dacdeac65d10707f403d4926fb68f1d29de217",
+    "byte_length":  604694,
+    "secret_pattern_hits":  0,
+    "copied_at":  "2026-07-10T22:20:39.9745531+09:00"
+}
