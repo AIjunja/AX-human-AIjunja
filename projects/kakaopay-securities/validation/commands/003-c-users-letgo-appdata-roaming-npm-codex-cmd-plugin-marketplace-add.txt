@@ -1,0 +1,13 @@
+COMMAND_JSON: ["C:\\Users\\letgo\\AppData\\Roaming\\npm\\codex.cmd", "plugin", "marketplace", "add", "C:\\Users\\letgo\\Documents\\인재전쟁\\temp-marketplace-kps-final-proof", "--json"]
+CWD: C:\Users\letgo\Documents\인재전쟁
+RETURN_CODE: 0
+DURATION_SECONDS: 0.172000
+
+--- STDOUT ---
+{
+  "marketplaceName": "axwar-kps-final-proof-20260710",
+  "installedRoot": "C:\\Users\\letgo\\Documents\\인재전쟁\\temp-marketplace-kps-final-proof",
+  "alreadyAdded": false
+}
+
+--- STDERR ---

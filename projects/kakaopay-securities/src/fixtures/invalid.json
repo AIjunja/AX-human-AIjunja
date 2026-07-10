@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "KPS-PUBLIC-INVALID-001",
+  "observed_window": {
+    "start": "2026-07-03T00:00:00+09:00",
+    "end": "2026-07-04T00:00:00+09:00"
+  },
+  "public_reports": [
+    {
+      "evidence_id": "DUPLICATE-EVIDENCE",
+      "source_record_id": "invalid-1",
+      "source_url": "http://example.invalid/review/1",
+      "source_type": "google_play_review",
+      "published_at": "2026-07-03",
+      "captured_at": "2026-07-10T21:30:00+09:00",
+      "text": "증권 화면이 열리지 않습니다.",
+      "rating": 1,
+      "account_number": "000000000000"
+    },
+    {
+      "evidence_id": "DUPLICATE-EVIDENCE",
+      "source_record_id": "invalid-2",
+      "source_url": "https://example.invalid/review/2",
+      "source_type": "google_play_review",
+      "published_at": "2026-07-03",
+      "captured_at": "2026-07-10T21:30:00+09:00",
+      "text": "증권 화면이 열리지 않습니다.",
+      "rating": 1
+    }
+  ],
+  "official_sources": []
+}

@@ -1,0 +1,25 @@
+# 카카오페이증권 제출 폼 답변
+
+## Q1. 무엇을, 누가, 어떤 상황에서 쓰는가
+
+카카오페이증권 서비스운영·QA 담당자가 공개 앱 리뷰와 공식 장애 공지를 초동 검토할 때 씁니다. 제보의 출처 ID·URL·게시/수집 시각을 보존하고, 관찰창 안의 공식 문구, 공개 제보에서 읽힌 신호, 재현에 필요한 누락, 소스 충돌을 사람 검토용 패킷으로 묶습니다. 회사의 장애·주문·민원 사실을 확인할 권한이 있는 담당자가 내부 텔레메트리와 함께 다음 판단을 하도록 돕는 도구이며 일반 투자자용이 아닙니다.
+
+## Q2. 왜 이 문제를 선택했는가
+
+공개 표본을 다시 확인한 2026-07-10 기준 Google Play와 Apple App Store의 최신 리뷰에서 증권 맥락 1~3점 263건을 분류했고, 거래 연속성 표현은 97건이었지만 환경·흐름·증상을 모두 담은 엄격한 재현 가능 제보는 6건뿐이었습니다. 카카오페이증권은 2026-06-30 07:02:57에 일부 서비스 장애 공지 7314, 07:15:55에 정상화 공지 7315를 냈고, 주문 장애 안내는 스크린샷·동영상·전화·주문 로그 같은 증거를 구분합니다. 그래서 공개 제보를 확정 장애나 보상 판단으로 바꾸지 않고 출처 보존·누락 표시·사람 검토로 연결하는 문제가 가장 근거가 강했습니다. 출처: https://www.kakaopaysec.com/customer/notice/dynamicBoardPageDetail.do?id=7314, https://www.kakaopaysec.com/customer/notice/dynamicBoardPageDetail.do?id=7315, https://kakaopaysec.com/portal/cstmnotice-obstc/dynamicPage.do, https://play.google.com/store/apps/details?id=com.kakaopay.app&hl=ko&gl=KR, https://apps.apple.com/kr/app/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%8E%98%EC%9D%B4/id1464496236
+
+## Q2 출처 URL
+
+https://kakaopaysec.com/portal/cstmnotice-obstc/dynamicPage.do
+
+## Q3. 플러그인은 어떻게 작동하는가
+
+사용자는 schema_version, case_id, 시간대가 있는 observed_window, public_reports, official_sources를 넣습니다. 표준 라이브러리 실행기가 최상위/레코드 필드, HTTPS, 출처 유형, 중복 evidence ID와 source record ID, 시간, 고신뢰 개인정보 패턴을 검증합니다. 통과한 각 원문은 evidence_registry에 ID·URL·게시/수집 시각·SHA-256으로 보존되고 원문은 출력에 반복하지 않습니다. 공개 문구에서는 관찰 코드만 추출하고, 공식 출처는 관찰창 안 게시 여부와 공지의 공개 범위만 연결합니다. 제보별 환경·정확 시각·절차·기대/실제 결과 누락과 소스 충돌을 표시합니다. 공개 제보 2건 이상과 창 안 공식 출처가 있으면 READY_FOR_HUMAN_TRIAGE, 아니면 NEEDS_MORE_PUBLIC_INFORMATION입니다. 투자 추천·주문 실행·손실액·보상 적격성·회사 귀책·원인은 항상 NOT_ASSESSED이며 최종 판단은 사람과 내부 근거가 합니다.
+
+## Q4. AI를 어떻게 사용했는가
+
+AI는 공개 공식 페이지와 앱 리뷰 표면을 재확인하고, 후보를 공개 근거·사용자 현실성·반복 가치·차별성·검증성·구현성·금융 위험으로 점수화했으며, 표준 라이브러리 실행기·스키마·fixture 3종·23개 테스트·SKILL.md·README·출처 장부를 작성했습니다. 첫 GREEN 실행에서는 조건부 집합 언패킹 문법 오류가 나와 실패를 숨기지 않고 명시적 human_review_reasons 집합으로 고쳤고, 이후 23개 테스트를 통과시켰습니다. 사용자는 공개 자료만 사용하고 서비스운영·QA를 사용자로 한정하며 원인·귀책·보상·투자 판단을 금지하는 범위와 제출 조건을 정했습니다. AI가 검토한 투자정보 표현 검수안은 공개 장애 공지와 직접 연결되는 현재 안보다 근거·재현성이 약해 채택하지 않았습니다.
+
+## Q5. 어떻게 검증했는가
+
+정상 fixture를 넣자 READY_FOR_HUMAN_TRIAGE, evidence 4건, 보존율 100%, 금지 판단 PASS의 proof line이 나왔습니다. 정보 부족 fixture는 사실을 만들지 않고 NEEDS_MORE_PUBLIC_INFORMATION을 반환했고, 잘못된 입력은 민감 필드·중복 ID·비HTTPS 오류와 종료 코드 2를 냈습니다. 공식 plugin/SKILL validator, Python 문법, unittest 23건과 harness 46건을 실행했습니다. 독립 axwar-kps-final marketplace 설치 후 installed/enabled를 확인하고 새 Codex 세션에서 실제 스킬이 설치본 normal fixture를 실행해 같은 proof line과 안정 필드를 냈습니다. 처음 harness 보고는 Windows cp949 출력 인코딩으로 깨져 UTF-8 환경에서 다시 실행했습니다. 공개 리뷰는 자기보고이고 게시 시각만으로 실제 장애 지속시간·원인·귀책을 입증하지 못하는 한계가 남습니다.

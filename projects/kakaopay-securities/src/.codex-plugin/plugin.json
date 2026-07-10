@@ -1,0 +1,24 @@
+{
+  "name": "kps-public-incident-intake",
+  "version": "1.0.0",
+  "description": "공개 장애 제보와 공식 공지를 출처 ID 보존형 사람 검토 패킷으로 구조화하는 카카오페이증권 서비스운영·QA용 플러그인",
+  "author": {
+    "name": "AX 인재전쟁 참가자"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "카카오페이증권 공개 장애 인테이크",
+    "shortDescription": "공개 제보를 근거 보존형 초동 검토 패킷으로 변환",
+    "longDescription": "카카오페이증권 서비스운영·QA 담당자가 공개 제보와 공식 공지를 입력하면 출처 레지스트리, 시간선, 관찰 신호, 누락 정보, 충돌, 사람 검토 항목을 결정론적으로 생성합니다. 투자·보상·귀책·원인은 판단하지 않습니다.",
+    "developerName": "AX 인재전쟁 참가자",
+    "category": "Productivity",
+    "capabilities": [
+      "public-evidence-intake",
+      "source-id-preservation",
+      "human-review-packet"
+    ],
+    "defaultPrompt": [
+      "Use $build-public-incident-intake to process a public incident evidence JSON file into a source-preserving human-review packet."
+    ]
+  }
+}

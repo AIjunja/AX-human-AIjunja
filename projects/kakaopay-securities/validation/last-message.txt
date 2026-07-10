@@ -1,0 +1,1 @@
+KPS_PUBLIC_INCIDENT_INTAKE_OK:v1|case=KPS-PUBLIC-2026-06-30-A|status=READY_FOR_HUMAN_TRIAGE|evidence=4|reports=2|official=2|preserved=100%|forbidden=PASS

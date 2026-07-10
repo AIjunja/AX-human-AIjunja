@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "KPS-PUBLIC-2026-06-30-A",
+  "observed_window": {
+    "start": "2026-06-30T07:00:00+09:00",
+    "end": "2026-06-30T07:30:00+09:00"
+  },
+  "public_reports": [
+    {
+      "evidence_id": "GP-9B529133",
+      "source_record_id": "9b529133-249a-483a-bb72-88613275c692",
+      "source_url": "https://play.google.com/store/apps/details?id=com.kakaopay.app&hl=ko&gl=KR&reviewId=9b529133-249a-483a-bb72-88613275c692",
+      "source_type": "google_play_review",
+      "published_at": "2026-06-30",
+      "captured_at": "2026-07-10T21:30:00+09:00",
+      "text": "증권이 먹통이 되면 어쩌자는거야?",
+      "rating": 1,
+      "platform": "android",
+      "app_version": "26.4.1",
+      "is_edited": false
+    },
+    {
+      "evidence_id": "GP-1DFE18BB",
+      "source_record_id": "1dfe18bb-3417-4711-b068-2cb74b521a44",
+      "source_url": "https://play.google.com/store/apps/details?id=com.kakaopay.app&hl=ko&gl=KR&reviewId=1dfe18bb-3417-4711-b068-2cb74b521a44",
+      "source_type": "google_play_review",
+      "published_at": "2026-06-30",
+      "captured_at": "2026-07-10T21:30:00+09:00",
+      "text": "지금 증권홈 접속안된다 뭔일입니까?",
+      "rating": 1,
+      "platform": "android",
+      "app_version": "26.5.1",
+      "is_edited": false
+    }
+  ],
+  "official_sources": [
+    {
+      "evidence_id": "KPS-NOTICE-7314",
+      "source_record_id": "7314",
+      "source_url": "https://www.kakaopaysec.com/customer/notice/dynamicBoardPageDetail.do?id=7314",
+      "source_type": "kps_official_notice",
+      "published_at": "2026-06-30T07:02:57+09:00",
+      "captured_at": "2026-07-10T21:30:00+09:00",
+      "text": "현재 일시적인 시스템 장애로 인해 일부 서비스 이용이 원활하지 않습니다. 현재 원인 파악 및 복구 작업을 진행 중이며 정상화되는 즉시 다시 안내드리겠습니다."
+    },
+    {
+      "evidence_id": "KPS-NOTICE-7315",
+      "source_record_id": "7315",
+      "source_url": "https://www.kakaopaysec.com/customer/notice/dynamicBoardPageDetail.do?id=7315",
+      "source_type": "kps_official_notice",
+      "published_at": "2026-06-30T07:15:55+09:00",
+      "captured_at": "2026-07-10T21:30:00+09:00",
+      "text": "일시적인 시스템 이슈로 인해 일부 서비스 이용이 원활하지 않았으나 현재는 정상적으로 이용 가능합니다."
+    }
+  ]
+}

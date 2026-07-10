@@ -1,0 +1,4 @@
+interface:
+  display_name: "공개 장애 인테이크"
+  short_description: "공개 제보를 출처 보존형 초동 패킷으로 구조화"
+  default_prompt: "Use $build-public-incident-intake to build a source-preserving public incident intake packet."

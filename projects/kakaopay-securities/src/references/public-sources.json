@@ -1,0 +1,130 @@
+{
+  "verified_at": "2026-07-10T22:00:00+09:00",
+  "scope": "Public sources used to justify the problem and constrain the workflow; they are not internal telemetry.",
+  "sources": [
+    {
+      "id": "KPS-COMPANY-ABOUT",
+      "url": "https://kakaopaysec.com/company/about/dynamicPage.do",
+      "publisher": "카카오페이증권",
+      "use": "Company identity and stated work principles, including fact-based communication.",
+      "limitation": "A company statement, not proof of a particular incident."
+    },
+    {
+      "id": "KPS-CAREER-AI-AGENT-ENGINEER",
+      "url": "https://career.kakaopaysec.com/job_posting/Rtv75CLr",
+      "publisher": "카카오페이증권",
+      "use": "Public evidence that AI agents are designed across planning, development, QA, deployment, and operations with measurable internal-platform use.",
+      "limitation": "A recruiting description; it does not prove deployment of this plugin."
+    },
+    {
+      "id": "KPS-CAREER-AI-AGENT-PLANNER",
+      "url": "https://career.kakaopaysec.com/job_posting/h6XYO0i5",
+      "publisher": "카카오페이증권",
+      "use": "Public evidence that QA, operations, compliance, and human-in-the-loop AI-agent workflows are realistic user contexts.",
+      "limitation": "A recruiting description; it does not identify an internal buyer or workflow owner for this plugin."
+    },
+    {
+      "id": "KPS-CAREER-CONSUMER-PROTECTION",
+      "url": "https://career.kakaopaysec.com/job_posting/nNZ7CkIK",
+      "publisher": "카카오페이증권",
+      "use": "Public evidence of monitoring, checking, and complaint-policy work in financial consumer protection.",
+      "limitation": "Supporting reviewer context, not proof of a particular incident."
+    },
+    {
+      "id": "KPS-ORDER-INCIDENT-GUIDE",
+      "url": "https://kakaopaysec.com/portal/cstmnotice-obstc/dynamicPage.do",
+      "publisher": "카카오페이증권",
+      "use": "Public description of order-incident intake distinctions and evidence such as screenshots, videos, calls, and order logs.",
+      "limitation": "The plugin must not decide whether a case is compensable, who is at fault, or the amount of loss."
+    },
+    {
+      "id": "KPS-NOTICE-7314",
+      "url": "https://www.kakaopaysec.com/customer/notice/dynamicBoardPageDetail.do?id=7314",
+      "publisher": "카카오페이증권",
+      "published_at": "2026-06-30T07:02:57+09:00",
+      "use": "Official public statement that some services were not operating smoothly while cause checking and restoration work were in progress.",
+      "limitation": "Does not establish each reviewer's experience, the affected feature list, fault, or root cause."
+    },
+    {
+      "id": "KPS-NOTICE-7315",
+      "url": "https://www.kakaopaysec.com/customer/notice/dynamicBoardPageDetail.do?id=7315",
+      "publisher": "카카오페이증권",
+      "published_at": "2026-06-30T07:15:55+09:00",
+      "use": "Official public statement that normal use was available after a temporary system issue.",
+      "limitation": "The interval from notice 7314 is a publication interval, not verified outage duration."
+    },
+    {
+      "id": "KPS-STOCK-NOTICE-7071",
+      "url": "https://www.kakaopaysec.com/stocknotice/instocknotice/dynamicBoardPageDetail.do?id=7071",
+      "publisher": "카카오페이증권",
+      "published_at": "2026-02-27",
+      "use": "Shows that an official notice can distinguish delayed ancillary functions from stock-order availability.",
+      "limitation": "Only supports notice-scope handling for that stated event."
+    },
+    {
+      "id": "KPS-STOCK-NOTICE-7074",
+      "url": "https://www.kakaopaysec.com/stocknotice/instocknotice/dynamicBoardPageDetail.do?id=7074",
+      "publisher": "카카오페이증권",
+      "published_at": "2026-02-27",
+      "use": "Shows an official normalization statement with specific affected public surfaces.",
+      "limitation": "Does not generalize to other events."
+    },
+    {
+      "id": "KPS-COMPLAINT-PROCESS",
+      "url": "https://www.kakaopaysec.com/portal/minwonjubsu/dynamicPage.do",
+      "publisher": "카카오페이증권",
+      "use": "Public complaint intake, investigation, handling, and result-notification process.",
+      "limitation": "The plugin does not replace the formal complaint process."
+    },
+    {
+      "id": "KOFIA-STANDARD-INTERNAL-CONTROL",
+      "url": "https://law.kofia.or.kr/service/law/lawFullScreenContent.do?historySeq=443&seq=150",
+      "publisher": "금융투자협회",
+      "use": "Public industry-standard context for customer-order processing and IT-incident records and reporting.",
+      "limitation": "A standard reference, not evidence that Kakao Pay Securities violated a rule."
+    },
+    {
+      "id": "GOOGLE-PLAY-KAKAOPAY",
+      "url": "https://play.google.com/store/apps/details?id=com.kakaopay.app&hl=ko&gl=KR",
+      "publisher": "Google Play",
+      "use": "Public app-review surface and stable public review IDs used by the fixtures.",
+      "limitation": "Reviews are self-reports; ranking, availability, and text can change."
+    },
+    {
+      "id": "APPLE-APP-STORE-KAKAOPAY",
+      "url": "https://apps.apple.com/kr/app/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%8E%98%EC%9D%B4/id1464496236",
+      "publisher": "Apple App Store",
+      "use": "Public app-review surface used for the insufficient-information fixture.",
+      "limitation": "Reviews are self-reports; availability and text can change."
+    },
+    {
+      "id": "OPENAI-PLUGIN-OVERVIEW",
+      "url": "https://learn.chatgpt.com/docs/plugins?surface=app",
+      "publisher": "OpenAI",
+      "use": "Official plugin overview and new-session behavior after installation.",
+      "limitation": "Product documentation can change after the verification date."
+    },
+    {
+      "id": "JOCODING-KPS-INTERVIEW",
+      "url": "https://www.youtube.com/watch?v=aBuoojGjyf4",
+      "publisher": "조코딩 JoCoding",
+      "published_at": "2026-07-07",
+      "use": "Company service context, AI-assisted 상담 workflow, desired problem-solving and proof skills, and Codex tool-connection preference with timestamps documented in README.",
+      "limitation": "Does not prove incident frequency, root cause, loss, fault, internal workload, or exact AI KPI values; the stated competition problem is not reused as this preliminary-round problem."
+    },
+    {
+      "id": "OPENAI-BUILD-PLUGINS",
+      "url": "https://learn.chatgpt.com/docs/build-plugins",
+      "publisher": "OpenAI",
+      "use": "Official plugin root, manifest, skill, marketplace, and CLI construction guidance.",
+      "limitation": "Product documentation can change after the verification date."
+    },
+    {
+      "id": "OPENAI-BUILD-SKILLS",
+      "url": "https://learn.chatgpt.com/docs/build-skills",
+      "publisher": "OpenAI",
+      "use": "Official SKILL.md directory and frontmatter guidance.",
+      "limitation": "Product documentation can change after the verification date."
+    }
+  ]
+}

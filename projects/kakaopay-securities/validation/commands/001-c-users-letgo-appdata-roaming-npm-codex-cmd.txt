@@ -1,0 +1,9 @@
+COMMAND_JSON: ["C:\\Users\\letgo\\AppData\\Roaming\\npm\\codex.cmd", "--version"]
+CWD: C:\Users\letgo\Documents\인재전쟁
+RETURN_CODE: 0
+DURATION_SECONDS: 0.157000
+
+--- STDOUT ---
+codex-cli 0.142.2
+
+--- STDERR ---

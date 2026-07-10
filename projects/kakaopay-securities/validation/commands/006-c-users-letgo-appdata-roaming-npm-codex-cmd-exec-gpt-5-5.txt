@@ -1,0 +1,328 @@
+COMMAND_JSON: ["C:\\Users\\letgo\\AppData\\Roaming\\npm\\codex.cmd", "exec", "-m", "gpt-5.5", "-c", "model_reasoning_effort=\"high\"", "-C", "C:\\Users\\letgo\\Documents\\인재전쟁", "--sandbox", "read-only", "--color", "never", "--output-last-message", "C:\\Users\\letgo\\Documents\\인재전쟁\\final-evidence-kps\\final-proof\\20260710-223248\\last-message.txt", "Use $kps-public-incident-intake:build-public-incident-intake. Follow that installed plugin skill exactly. Return only the final sentinel required by the skill, with no explanation."]
+CWD: C:\Users\letgo\Documents\인재전쟁
+RETURN_CODE: 0
+DURATION_SECONDS: 40.765000
+
+--- STDOUT ---
+KPS_PUBLIC_INCIDENT_INTAKE_OK:v1|case=KPS-PUBLIC-2026-06-30-A|status=READY_FOR_HUMAN_TRIAGE|evidence=4|reports=2|official=2|preserved=100%|forbidden=PASS
+
+--- STDERR ---
+Reading additional input from stdin...
+2026-07-10T13:32:51.618448Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-07-10T13:32:51.618495Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-07-10T13:32:51.677175Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell
+2026-07-10T13:32:51.690787Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt[0]: prompt must be at most 128 characters path=C:\Users\letgo\.codex\.tmp\plugins\plugins\ngs-analysis\.codex-plugin/plugin.json
+2026-07-10T13:32:51.695473Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt[0]: prompt must be at most 128 characters path=C:\Users\letgo\.codex\.tmp\plugins\plugins\ngs-analysis\.codex-plugin/plugin.json
+2026-07-10T13:32:52.313428Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-07-10T13:32:52.313454Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-07-10T13:32:52.857073Z ERROR codex_core::session::session: failed to load skill C:\Users\letgo\.agents\skills\brainstorming\SKILL.md: missing YAML frontmatter delimited by ---
+2026-07-10T13:32:52.857096Z ERROR codex_core::session::session: failed to load skill C:\Users\letgo\.agents\skills\design-thinking\SKILL.md: missing YAML frontmatter delimited by ---
+OpenAI Codex v0.142.2
+--------
+workdir: C:\Users\letgo\Documents\인재전쟁
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: high
+reasoning summaries: none
+session id: 019f4c3b-2076-74c1-8329-75e9d386d0cc
+--------
+user
+Use $kps-public-incident-intake:build-public-incident-intake. Follow that installed plugin skill exactly. Return only the final sentinel required by the skill, with no explanation.
+2026-07-10T13:32:53.591460Z  WARN rmcp::transport::auth: Token refresh not possible, re-authorization required. error=OAuth token refresh failed: Server returned error response: invalid_grant: Grant not found
+2026-07-10T13:32:53.591530Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when Auth(AuthorizationRequired)
+2026-07-10T13:32:55.829224Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt[0]: prompt must be at most 128 characters path=C:\Users\letgo\.codex\.tmp\plugins\plugins\ngs-analysis\.codex-plugin/plugin.json
+2026-07-10T13:32:55.886278Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-07-10T13:32:55.886308Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-07-10T13:32:55.887703Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-07-10T13:32:55.887725Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-07-10T13:32:55.889125Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-07-10T13:32:55.889142Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-07-10T13:32:55.890380Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-07-10T13:32:55.890397Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-07-10T13:32:55.891949Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-07-10T13:32:55.891970Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-07-10T13:32:55.893479Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-07-10T13:32:55.893499Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+warning: Exceeded skills context budget of 2%. All skill descriptions were removed and 113 additional skills were not included in the model-visible skills list.
+2026-07-10T13:32:56.778314Z  WARN codex_otel::events::session_telemetry: metrics counter [codex.skill.injected] failed: tag value contains invalid characters: kps-public-incident-intake:build-public-incident-intake
+2026-07-10T13:32:56.851551Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt[0]: prompt must be at most 128 characters path=C:\Users\letgo\.codex\.tmp\plugins\plugins\ngs-analysis\.codex-plugin/plugin.json
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'C:\\Users\\letgo\\.codex\\plugins\\cache\\axwar-kps-final-proof-20260710\\kps-public-incident-intake\\1.0.0\\references\\public-sources.json'" in C:\Users\letgo\Documents\인재전쟁
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'C:\\Users\\letgo\\.codex\\plugins\\cache\\axwar-kps-final-proof-20260710\\kps-public-incident-intake\\1.0.0\\skills\\build-public-incident-intake\\SKILL.md'" in C:\Users\letgo\Documents\인재전쟁
+ succeeded in 658ms:
+---
+name: build-public-incident-intake
+description: Use when a Kakao Pay Securities service-operations or QA reviewer needs to turn public app reports and public official notices into a source-ID-preserving initial incident-intake packet. Also use for the bundled normal or insufficient fixtures and installation proof. Never use for investment advice, trade execution, loss calculation, compensation or fault decisions, root-cause inference, or personal/account data.
+---
+
+# Build Public Incident Intake
+
+## Purpose and trigger
+
+Build a deterministic, public-evidence-only intake packet for a human service-operations or QA reviewer. Invoke this skill when the request mentions public outage reports, public VOC triage, an evidence registry, the bundled fixtures, or `KPS_PUBLIC_INCIDENT_INTAKE_OK`.
+
+This workflow structures what public sources state. It does not confirm an internal incident, a customer's individual experience, an outage duration, a cause, fault, compensation, loss, or a trading decision.
+
+## Inputs
+
+Accept one UTF-8 JSON file conforming to `schemas/public-incident-intake.schema.json` at the plugin root. Required top-level fields are:
+
+- `schema_version`: exactly `1.0.0`
+- `case_id`: stable uppercase identifier
+- `observed_window.start` and `.end`: timezone-aware ISO datetimes
+- `public_reports`: at least one public source record
+- `official_sources`: zero or more public official records
+
+Every record must carry a unique `evidence_id`, the source's stable `source_record_id`, a public HTTPS `source_url`, `source_type`, `published_at`, `captured_at`, and the source text. Do not accept names, phone numbers, email addresses, resident-registration numbers, account numbers, or order numbers.
+
+## Workflow
+
+1. Locate the plugin root: it is two directories above this `SKILL.md` file.
+2. Read `references/public-sources.json` only to understand source roles and limitations. Do not treat it as a substitute for records in the input.
+3. Confirm that the requested input is a public-evidence JSON file. Refuse private account, order, or customer identifiers.
+4. Preserve the input file. Do not silently edit, normalize, or delete its records.
+5. From the plugin root, execute:
+
+   `python -B -X utf8 scripts/build_incident_intake.py <input-json> --compact`
+
+6. If the command exits `2`, report its structured `code` and `path` values and ask for corrected public input. Do not produce a success proof.
+7. If it succeeds, inspect `workflow_status`, `source_coverage`, `evidence_registry`, `temporal_association`, `reported_signals`, `official_corroboration`, `source_conflicts`, `missing_information`, `human_review`, `prohibited_conclusions`, and `safety_review`.
+8. Verify that every input `evidence_id` and `source_record_id` is present in `evidence_registry`, `safety_review.result` is `PASS`, and all six prohibited conclusions are `NOT_ASSESSED`.
+9. Present the packet to the human reviewer. `READY_FOR_HUMAN_TRIAGE` means the minimum public-source combination was met; it never means an incident, cause, fault, loss, or compensation was established. `NEEDS_MORE_PUBLIC_INFORMATION` is a valid non-error result; list only the reported missing fields.
+10. Leave the final operational, QA, compliance, and customer-response decisions to authorized people using authorized internal telemetry.
+
+## Source and judgment rules
+
+- Treat an app review as a public report, not as a verified event or verified affected customer.
+- Treat a company notice as evidence only of what the company publicly stated. Correlation is limited to the supplied time window.
+- A date-only report `published_at` on a day touched by the observed window is an `UNRESOLVED_DATE_ONLY_SAME_DAY` candidate, never an exact in-window observation. A date-only official source cannot corroborate a narrow time window.
+- Only `kps_official_notice` records can satisfy company-official window corroboration or the READY gate. Preserve `public_standard` and `public_market_notice` records as context, but never treat them as Kakao Pay Securities confirmation.
+- The interval between two notice publication times is not an outage duration.
+- A public industry standard supplies context, not evidence that Kakao Pay Securities violated it.
+- Signal codes such as `UNAVAILABLE` or `ORDER_CONTROL` are text observations, not diagnoses.
+- A source conflict always remains `HUMAN_REVIEW_REQUIRED`.
+- Never add evidence, fill a missing reproduction detail, or infer an unreported cause.
+
+## Installation and fixture proof
+
+For an installation verification request, use the real workflow, not a stand-alone echo. From the plugin root:
+
+1. Run `python -B -X utf8 scripts/build_incident_intake.py fixtures/normal.json --compact`.
+2. Inspect the full JSON using steps 7 and 8 above.
+3. Only after that command succeeds, run `python -B -X utf8 scripts/build_incident_intake.py fixtures/normal.json --proof-only`.
+4. Return exactly the emitted proof line if the caller explicitly requests proof-only output.
+
+If an installation smoke request invokes this skill without naming an input path, use the installed
+plugin's own `fixtures/normal.json` and its own `scripts/build_incident_intake.py`; do not search for
+or use another company's fixture.
+
+The expected bundled-fixture line is:
+
+`KPS_PUBLIC_INCIDENT_INTAKE_OK:v1|case=KPS-PUBLIC-2026-06-30-A|status=READY_FOR_HUMAN_TRIAGE|evidence=4|reports=2|official=2|preserved=100%|forbidden=PASS`
+
+Never return that line when either execution failed, when the full JSON was not inspected, or when its safety checks differ.
+
+## Exceptions
+
+- Missing Python or unreadable file: report the execution blocker; do not simulate output.
+- `INPUT_VALIDATION_FAILED`: return the structured errors without echoing sensitive input text.
+- Insufficient sources: keep `NEEDS_MORE_PUBLIC_INFORMATION`; do not upgrade it manually.
+- Source divergence: preserve both source IDs and require human review.
+- Any non-`PASS` safety result, missing evidence ID, or assessed prohibited conclusion: stop and report validation failure.
+
+## Output contract
+
+Return the generated packet without renaming stable fields. When summarizing for a human, include:
+
+- case ID and workflow status
+- source counts and evidence IDs
+- exact, date-only unresolved, outside-window, and topic-irrelevant association IDs
+- observed signal codes with supporting evidence IDs
+- official window-correlation status and IDs
+- conflicts and missing information
+- required human review actions
+- the six `NOT_ASSESSED` prohibited conclusions
+
+Do not repeat raw source text unless the human explicitly needs to inspect a short public excerpt; prefer hashes and source URLs.
+
+
+ succeeded in 693ms:
+{
+  "verified_at": "2026-07-10T22:00:00+09:00",
+  "scope": "Public sources used to justify the problem and constrain the workflow; they are not internal telemetry.",
+  "sources": [
+    {
+      "id": "KPS-COMPANY-ABOUT",
+      "url": "https://kakaopaysec.com/company/about/dynamicPage.do",
+      "publisher": "移댁뭅?ㅽ럹?댁쬆沅?,
+      "use": "Company identity and stated work principles, including fact-based communication.",
+      "limitation": "A company statement, not proof of a particular incident."
+    },
+    {
+      "id": "KPS-CAREER-AI-AGENT-ENGINEER",
+      "url": "https://career.kakaopaysec.com/job_posting/Rtv75CLr",
+      "publisher": "移댁뭅?ㅽ럹?댁쬆沅?,
+      "use": "Public evidence that AI agents are designed across planning, development, QA, deployment, and operations with measurable internal-platform use.",
+      "limitation": "A recruiting description; it does not prove deployment of this plugin."
+    },
+    {
+      "id": "KPS-CAREER-AI-AGENT-PLANNER",
+      "url": "https://career.kakaopaysec.com/job_posting/h6XYO0i5",
+      "publisher": "移댁뭅?ㅽ럹?댁쬆沅?,
+      "use": "Public evidence that QA, operations, compliance, and human-in-the-loop AI-agent workflows are realistic user contexts.",
+      "limitation": "A recruiting description; it does not identify an internal buyer or workflow owner for this plugin."
+    },
+    {
+      "id": "KPS-CAREER-CONSUMER-PROTECTION",
+      "url": "https://career.kakaopaysec.com/job_posting/nNZ7CkIK",
+      "publisher": "移댁뭅?ㅽ럹?댁쬆沅?,
+      "use": "Public evidence of monitoring, checking, and complaint-policy work in financial consumer protection.",
+      "limitation": "Supporting reviewer context, not proof of a particular incident."
+    },
+    {
+      "id": "KPS-ORDER-INCIDENT-GUIDE",
+      "url": "https://kakaopaysec.com/portal/cstmnotice-obstc/dynamicPage.do",
+      "publisher": "移댁뭅?ㅽ럹?댁쬆沅?,
+      "use": "Public description of order-incident intake distinctions and evidence such as screenshots, videos, calls, and order logs.",
+      "limitation": "The plugin must not decide whether a case is compensable, who is at fault, or the amount of loss."
+    },
+    {
+      "id": "KPS-NOTICE-7314",
+      "url": "https://www.kakaopaysec.com/customer/notice/dynamicBoardPageDetail.do?id=7314",
+      "publisher": "移댁뭅?ㅽ럹?댁쬆沅?,
+      "published_at": "2026-06-30T07:02:57+09:00",
+      "use": "Official public statement that some services were not operating smoothly while cause checking and restoration work were in progress.",
+      "limitation": "Does not establish each reviewer's experience, the affected feature list, fault, or root cause."
+    },
+    {
+      "id": "KPS-NOTICE-7315",
+      "url": "https://www.kakaopaysec.com/customer/notice/dynamicBoardPageDetail.do?id=7315",
+      "publisher": "移댁뭅?ㅽ럹?댁쬆沅?,
+      "published_at": "2026-06-30T07:15:55+09:00",
+      "use": "Official public statement that normal use was available after a temporary system issue.",
+      "limitation": "The interval from notice 7314 is a publication interval, not verified outage duration."
+    },
+    {
+      "id": "KPS-STOCK-NOTICE-7071",
+      "url": "https://www.kakaopaysec.com/stocknotice/instocknotice/dynamicBoardPageDetail.do?id=7071",
+      "publisher": "移댁뭅?ㅽ럹?댁쬆沅?,
+      "published_at": "2026-02-27",
+      "use": "Shows that an official notice can distinguish delayed ancillary functions from stock-order availability.",
+      "limitation": "Only supports notice-scope handling for that stated event."
+    },
+    {
+      "id": "KPS-STOCK-NOTICE-7074",
+      "url": "https://www.kakaopaysec.com/stocknotice/instocknotice/dynamicBoardPageDetail.do?id=7074",
+      "publisher": "移댁뭅?ㅽ럹?댁쬆沅?,
+      "published_at": "2026-02-27",
+      "use": "Shows an official normalization statement with specific affected public surfaces.",
+      "limitation": "Does not generalize to other events."
+    },
+    {
+      "id": "KPS-COMPLAINT-PROCESS",
+      "url": "https://www.kakaopaysec.com/portal/minwonjubsu/dynamicPage.do",
+      "publisher": "移댁뭅?ㅽ럹?댁쬆沅?,
+      "use": "Public complaint intake, investigation, handling, and result-notification process.",
+      "limitation": "The plugin does not replace the formal complaint process."
+    },
+    {
+      "id": "KOFIA-STANDARD-INTERNAL-CONTROL",
+      "url": "https://law.kofia.or.kr/service/law/lawFullScreenContent.do?historySeq=443&seq=150",
+      "publisher": "湲덉쑖?ъ옄?묓쉶",
+      "use": "Public industry-standard context for customer-order processing and IT-incident records and reporting.",
+      "limitation": "A standard reference, not evidence that Kakao Pay Securities violated a rule."
+    },
+    {
+      "id": "GOOGLE-PLAY-KAKAOPAY",
+      "url": "https://play.google.com/store/apps/details?id=com.kakaopay.app&hl=ko&gl=KR",
+      "publisher": "Google Play",
+      "use": "Public app-review surface and stable public review IDs used by the fixtures.",
+      "limitation": "Reviews are self-reports; ranking, availability, and text can change."
+    },
+    {
+      "id": "APPLE-APP-STORE-KAKAOPAY",
+      "url": "https://apps.apple.com/kr/app/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%8E%98%EC%9D%B4/id1464496236",
+      "publisher": "Apple App Store",
+      "use": "Public app-review surface used for the insufficient-information fixture.",
+      "limitation": "Reviews are self-reports; availability and text can change."
+    },
+    {
+      "id": "OPENAI-PLUGIN-OVERVIEW",
+      "url": "https://learn.chatgpt.com/docs/plugins?surface=app",
+      "publisher": "OpenAI",
+      "use": "Official plugin overview and new-session behavior after installation.",
+      "limitation": "Product documentation can change after the verification date."
+    },
+    {
+      "id": "JOCODING-KPS-INTERVIEW",
+      "url": "https://www.youtube.com/watch?v=aBuoojGjyf4",
+      "publisher": "議곗퐫??JoCoding",
+      "published_at": "2026-07-07",
+      "use": "Company service context, AI-assisted ?곷떞 workflow, desired problem-solving and proof skills, and Codex tool-connection preference with timestamps documented in README.",
+      "limitation": "Does not prove incident frequency, root cause, loss, fault, internal workload, or exact AI KPI values; the stated competition problem is not reused as this preliminary-round problem."
+    },
+    {
+      "id": "OPENAI-BUILD-PLUGINS",
+      "url": "https://learn.chatgpt.com/docs/build-plugins",
+      "publisher": "OpenAI",
+      "use": "Official plugin root, manifest, skill, marketplace, and CLI construction guidance.",
+      "limitation": "Product documentation can change after the verification date."
+    },
+    {
+      "id": "OPENAI-BUILD-SKILLS",
+      "url": "https://learn.chatgpt.com/docs/build-skills",
+      "publisher": "OpenAI",
+      "use": "Official SKILL.md directory and frontmatter guidance.",
+      "limitation": "Product documentation can change after the verification date."
+    }
+  ]
+}
+
+
+2026-07-10T13:33:05.575987Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt[0]: prompt must be at most 128 characters path=C:\Users\letgo\.codex\.tmp\plugins\plugins\ngs-analysis\.codex-plugin/plugin.json
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'python -B -X utf8 scripts/build_incident_intake.py fixtures/normal.json --compact' in C:\Users\letgo\.codex\plugins\cache\axwar-kps-final-proof-20260710\kps-public-incident-intake\1.0.0
+ succeeded in 570ms:
+{"case_id":"KPS-PUBLIC-2026-06-30-A","event_classification":"PUBLIC_REPORT_CLUSTER","evidence_registry":[{"captured_at":"2026-07-10T21:30:00+09:00","content_sha256":"96dc62a4a77d1794607d34aa88c425114a0e0a568165513a0731f2be4ecbb569","evidence_id":"GP-1DFE18BB","fact_status":"PUBLICLY_REPORTED","published_at":"2026-06-30","source_record_id":"1dfe18bb-3417-4711-b068-2cb74b521a44","source_type":"google_play_review","source_url":"https://play.google.com/store/apps/details?id=com.kakaopay.app&hl=ko&gl=KR&reviewId=1dfe18bb-3417-4711-b068-2cb74b521a44"},{"captured_at":"2026-07-10T21:30:00+09:00","content_sha256":"45d7106953be22093e385cef5029055dc5b817ba4ae693a149de8c8ce312df32","evidence_id":"GP-9B529133","fact_status":"PUBLICLY_REPORTED","published_at":"2026-06-30","source_record_id":"9b529133-249a-483a-bb72-88613275c692","source_type":"google_play_review","source_url":"https://play.google.com/store/apps/details?id=com.kakaopay.app&hl=ko&gl=KR&reviewId=9b529133-249a-483a-bb72-88613275c692"},{"captured_at":"2026-07-10T21:30:00+09:00","content_sha256":"1f816b9af8247e9afdd3dfc0f60b47a48842490a24c1ccfb7547ca5fac43b1fe","evidence_id":"KPS-NOTICE-7314","fact_status":"OFFICIALLY_STATED","published_at":"2026-06-30T07:02:57+09:00","source_record_id":"7314","source_type":"kps_official_notice","source_url":"https://www.kakaopaysec.com/customer/notice/dynamicBoardPageDetail.do?id=7314"},{"captured_at":"2026-07-10T21:30:00+09:00","content_sha256":"334b1ecbccb1ca0f81b9e1cf902ffb8f6ceb9453ebc66a9e5bb35e671dced48b","evidence_id":"KPS-NOTICE-7315","fact_status":"OFFICIALLY_STATED","published_at":"2026-06-30T07:15:55+09:00","source_record_id":"7315","source_type":"kps_official_notice","source_url":"https://www.kakaopaysec.com/customer/notice/dynamicBoardPageDetail.do?id=7315"}],"human_review":{"next_actions":["VERIFY_AGAINST_AUTHORIZED_INTERNAL_TELEMETRY","CONFIRM_AFFECTED_SURFACE_AND_TIME_WINDOW","KEEP_FINAL_OPERATIONAL_AND_COMPLIANCE_JUDGMENT_WITH_HUMANS"],"reasons":["MISSING_REPRODUCTION_CONTEXT","PUBLIC_REPORTS_ARE_NOT_INTERNAL_INCIDENT_CONFIRMATION","UNRESOLVED_TEMPORAL_ASSOCIATION"],"required":true},"input_sha256":"31bfa217e63b4134ad5f4ce9db538789074e7d1daddd3b0674326086ea5d9bc6","missing_information":[{"evidence_id":"GP-1DFE18BB","fields":["device_os","network","exact_occurred_at","reproduction_steps","expected_result","actual_result"]},{"evidence_id":"GP-9B529133","fields":["device_os","network","exact_occurred_at","reproduction_steps","expected_result","actual_result"]}],"official_corroboration":{"evidence_ids":["KPS-NOTICE-7314","KPS-NOTICE-7315"],"scope":"WINDOW_ONLY_NOT_CAUSE_FAULT_OR_INDIVIDUAL_REPORT_CONFIRMATION","status":"OFFICIAL_SOURCE_IN_WINDOW"},"prohibited_conclusions":[{"code":"INVESTMENT_RECOMMENDATION","status":"NOT_ASSESSED"},{"code":"TRADE_EXECUTION","status":"NOT_ASSESSED"},{"code":"LOSS_CALCULATION","status":"NOT_ASSESSED"},{"code":"COMPENSATION_ELIGIBILITY","status":"NOT_ASSESSED"},{"code":"COMPANY_FAULT","status":"NOT_ASSESSED"},{"code":"ROOT_CAUSE","status":"NOT_ASSESSED"}],"proof_line":"KPS_PUBLIC_INCIDENT_INTAKE_OK:v1|case=KPS-PUBLIC-2026-06-30-A|status=READY_FOR_HUMAN_TRIAGE|evidence=4|reports=2|official=2|preserved=100%|forbidden=PASS","reported_signals":[{"code":"SECURITIES_SURFACE","evidence_ids":["GP-1DFE18BB","GP-9B529133"],"fact_status":"PUBLICLY_REPORTED"},{"code":"UNAVAILABLE","evidence_ids":["GP-1DFE18BB","GP-9B529133"],"fact_status":"PUBLICLY_REPORTED"}],"safety_review":{"evidence_id_preservation_percent":100,"forbidden_output_keys_present":[],"personal_data_scan":"PASS","personal_data_scan_scope":"ALL_ACCEPTED_STRING_FIELDS_HIGH_CONFIDENCE_PATTERNS","result":"PASS","unpreserved_evidence_ids":[]},"schema_version":"1.0.0","source_conflicts":[],"source_coverage":{"by_source_type":{"google_play_review":2,"kps_official_notice":2},"candidate_public_report_count":2,"official_source_count":2,"public_report_count":2},"temporal_association":{"candidate_report_count":2,"candidate_report_ids":["GP-1DFE18BB","GP-9B529133"],"date_only_official_source_ids":[],"exact_window_official_source_ids":["KPS-NOTICE-7314","KPS-NOTICE-7315"],"exact_window_report_ids":[],"outside_window_official_source_ids":[],"outside_window_report_ids":[],"rule":"SECURITIES_DISRUPTION_SIGNAL_AND_EXACT_WINDOW_OR_UNRESOLVED_SAME_DAY","topic_irrelevant_report_ids":[],"unresolved_report_ids":["GP-1DFE18BB","GP-9B529133"]},"timeline":[{"evidence_ids":["GP-1DFE18BB"],"fact_status":"PUBLICLY_REPORTED","published_at":"2026-06-30","source_type":"google_play_review"},{"evidence_ids":["GP-9B529133"],"fact_status":"PUBLICLY_REPORTED","published_at":"2026-06-30","source_type":"google_play_review"},{"evidence_ids":["KPS-NOTICE-7314"],"fact_status":"OFFICIALLY_STATED","published_at":"2026-06-30T07:02:57+09:00","source_type":"kps_official_notice"},{"evidence_ids":["KPS-NOTICE-7315"],"fact_status":"OFFICIALLY_STATED","published_at":"2026-06-30T07:15:55+09:00","source_type":"kps_official_notice"}],"workflow_status":"READY_FOR_HUMAN_TRIAGE"}
+
+2026-07-10T13:33:11.245438Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt[0]: prompt must be at most 128 characters path=C:\Users\letgo\.codex\.tmp\plugins\plugins\ngs-analysis\.codex-plugin/plugin.json
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$packet = python -B -X utf8 scripts/build_incident_intake.py fixtures/normal.json --compact | ConvertFrom-Json
+$inputJson = Get-Content -Raw -LiteralPath '"'fixtures/normal.json' | ConvertFrom-Json
+"'$registryIds = @($packet.evidence_registry | ForEach-Object { $_.evidence_id })
+$registrySourceIds = @($packet.evidence_registry | ForEach-Object { [string]$_.source_record_id })
+$inputRecords = @($inputJson.public_reports) + @($inputJson.official_sources)
+$missingEvidence = @($inputRecords | Where-Object { $registryIds -notcontains $_.evidence_id } | ForEach-Object { $_.evidence_id })
+$missingSource = @($inputRecords | Where-Object { $registrySourceIds -notcontains ([string]$_.source_record_id) } | ForEach-Object { $_.source_record_id })
+$required = '"'workflow_status','source_coverage','evidence_registry','temporal_association','reported_signals','official_corroboration','source_conflicts','missing_information','human_review','prohibited_conclusions','safety_review'
+"'$missingFields = @($required | Where-Object { -not ($packet.PSObject.Properties.Name -contains $_) })
+$badProhibited = @($packet.prohibited_conclusions | Where-Object { $_.status -ne '"'NOT_ASSESSED' } | ForEach-Object { "'$_.code + '"':' + "'$_.status })
+[pscustomobject]@{
+  workflow_status = $packet.workflow_status
+  evidence_count = @($packet.evidence_registry).Count
+  safety_result = $packet.safety_review.result
+  missing_required_fields = $missingFields
+  missing_evidence_ids = $missingEvidence
+  missing_source_record_ids = $missingSource
+  prohibited_count = @($packet.prohibited_conclusions).Count
+  bad_prohibited = $badProhibited
+  proof_line = $packet.proof_line
+} | ConvertTo-Json -Compress' in C:\Users\letgo\.codex\plugins\cache\axwar-kps-final-proof-20260710\kps-public-incident-intake\1.0.0
+ succeeded in 832ms:
+{"workflow_status":"READY_FOR_HUMAN_TRIAGE","evidence_count":4,"safety_result":"PASS","missing_required_fields":[],"missing_evidence_ids":[],"missing_source_record_ids":[],"prohibited_count":6,"bad_prohibited":[],"proof_line":"KPS_PUBLIC_INCIDENT_INTAKE_OK:v1|case=KPS-PUBLIC-2026-06-30-A|status=READY_FOR_HUMAN_TRIAGE|evidence=4|reports=2|official=2|preserved=100%|forbidden=PASS"}
+
+2026-07-10T13:33:19.998219Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt[0]: prompt must be at most 128 characters path=C:\Users\letgo\.codex\.tmp\plugins\plugins\ngs-analysis\.codex-plugin/plugin.json
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'python -B -X utf8 scripts/build_incident_intake.py fixtures/normal.json --proof-only' in C:\Users\letgo\.codex\plugins\cache\axwar-kps-final-proof-20260710\kps-public-incident-intake\1.0.0
+ succeeded in 520ms:
+KPS_PUBLIC_INCIDENT_INTAKE_OK:v1|case=KPS-PUBLIC-2026-06-30-A|status=READY_FOR_HUMAN_TRIAGE|evidence=4|reports=2|official=2|preserved=100%|forbidden=PASS
+
+2026-07-10T13:33:23.803245Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt[0]: prompt must be at most 128 characters path=C:\Users\letgo\.codex\.tmp\plugins\plugins\ngs-analysis\.codex-plugin/plugin.json
+codex
+KPS_PUBLIC_INCIDENT_INTAKE_OK:v1|case=KPS-PUBLIC-2026-06-30-A|status=READY_FOR_HUMAN_TRIAGE|evidence=4|reports=2|official=2|preserved=100%|forbidden=PASS
+2026-07-10T13:33:29.845499Z  WARN codex_mcp::rmcp_client: failed to initialize MCP client during shutdown: MCP startup failed: handshaking with MCP server failed: Send message error Transport [rmcp::transport::worker::WorkerTransport<rmcp::transport::streamable_http_client::StreamableHttpClientWorker<rmcp::transport::auth::AuthClient<codex_rmcp_client::http_client_adapter::StreamableHttpClientAdapter>>>] error: Auth error: OAuth authorization required, when send initialize request
+tokens used
+20,797

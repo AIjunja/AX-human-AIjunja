@@ -1,0 +1,16 @@
+COMMAND_JSON: ["C:\\Users\\letgo\\AppData\\Roaming\\npm\\codex.cmd", "plugin", "add", "kps-public-incident-intake@axwar-kps-final-proof-20260710", "--json"]
+CWD: C:\Users\letgo\Documents\인재전쟁
+RETURN_CODE: 0
+DURATION_SECONDS: 0.594000
+
+--- STDOUT ---
+{
+  "pluginId": "kps-public-incident-intake@axwar-kps-final-proof-20260710",
+  "name": "kps-public-incident-intake",
+  "marketplaceName": "axwar-kps-final-proof-20260710",
+  "version": "1.0.0",
+  "installedPath": "C:\\Users\\letgo\\.codex\\plugins\\cache\\axwar-kps-final-proof-20260710\\kps-public-incident-intake\\1.0.0",
+  "authPolicy": "ON_INSTALL"
+}
+
+--- STDERR ---

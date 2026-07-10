@@ -1,0 +1,60 @@
+COMMAND_JSON: ["C:\\Users\\letgo\\AppData\\Roaming\\npm\\codex.cmd", "plugin", "marketplace", "list", "--json"]
+CWD: C:\Users\letgo\Documents\인재전쟁
+RETURN_CODE: 0
+DURATION_SECONDS: 0.203000
+
+--- STDOUT ---
+{
+  "marketplaces": [
+    {
+      "name": "openai-primary-runtime",
+      "root": "C:\\Users\\letgo\\.cache\\codex-runtimes\\codex-primary-runtime\\plugins\\openai-primary-runtime"
+    },
+    {
+      "name": "openai-bundled",
+      "root": "C:\\Users\\letgo\\.codex\\.tmp\\bundled-marketplaces\\openai-bundled"
+    },
+    {
+      "name": "openai-curated",
+      "root": "C:\\Users\\letgo\\.codex\\.tmp\\plugins"
+    },
+    {
+      "name": "axwar-musinsa-final",
+      "root": "C:\\Users\\letgo\\Documents\\인재전쟁\\final-workspaces\\musinsa\\marketplace"
+    },
+    {
+      "name": "axwar-harness-local",
+      "root": "C:\\Users\\letgo\\Documents\\인재전쟁\\plugin-harness\\.work\\marketplace"
+    },
+    {
+      "name": "kps-local",
+      "root": "C:\\Users\\letgo\\Documents\\인재전쟁\\plugin-harness\\.work\\marketplace-kps"
+    },
+    {
+      "name": "musinsa-local",
+      "root": "C:\\Users\\letgo\\Documents\\인재전쟁\\plugin-harness\\.work\\marketplace-musinsa"
+    },
+    {
+      "name": "channel-talk-final-2203",
+      "root": "C:\\Users\\letgo\\Documents\\인재전쟁\\temp-marketplace-channel-talk-final"
+    },
+    {
+      "name": "axwar-kps-final",
+      "root": "C:\\Users\\letgo\\Documents\\인재전쟁\\temp-marketplace-kps"
+    },
+    {
+      "name": "axwar-kps-current-2204",
+      "root": "C:\\Users\\letgo\\Documents\\인재전쟁\\temp-marketplace-kps-current"
+    },
+    {
+      "name": "axwar-kps-current-2204b",
+      "root": "C:\\Users\\letgo\\Documents\\인재전쟁\\temp-marketplace-kps-current-2"
+    },
+    {
+      "name": "axwar-kps-final-verified-20260710",
+      "root": "C:\\Users\\letgo\\Documents\\인재전쟁\\temp-marketplace-kps-final-verified"
+    }
+  ]
+}
+
+--- STDERR ---

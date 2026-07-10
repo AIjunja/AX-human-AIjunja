@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "KPS-PUBLIC-2026-07-03-B",
+  "observed_window": {
+    "start": "2026-07-03T00:00:00+09:00",
+    "end": "2026-07-04T00:00:00+09:00"
+  },
+  "public_reports": [
+    {
+      "evidence_id": "AS-14256733764",
+      "source_record_id": "14256733764",
+      "source_url": "https://apps.apple.com/kr/app/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%8E%98%EC%9D%B4/id1464496236",
+      "source_type": "apple_app_store_review",
+      "published_at": "2026-07-03T06:08:25Z",
+      "captured_at": "2026-07-10T21:30:00+09:00",
+      "text": "구매판매 버튼이 창에서 사라져서 원하는 타이밍에 매도, 매수를 못합니다.",
+      "rating": 2
+    }
+  ],
+  "official_sources": []
+}
