@@ -107,5 +107,5 @@ python -X utf8 src/scripts/review_to_repro.py src/fixtures/invalid.json
 - fixture의 `TEST-*` 환경은 테스트 시나리오용 합성값이며 공개 리뷰 사실이 아닙니다. 값이 채워져도 `TEST_SCENARIO_ONLY`입니다.
 - 규칙 밖 표현은 `unknown / NEEDS_REPRO_AND_ENVIRONMENT_CONFIRMATION`으로 남깁니다.
 - 실제 무신사 앱 재현, 내부 티켓 생성, 매출 영향, 전체 고객 발생률은 검증하지 않았습니다.
-- 제출 logs의 메인 작업 JSONL은 종료 전 snapshot일 수 있으며 전체 원본이라고 주장하지 않습니다. 종료 후 `finalize-musinsa.ps1`로 세션 `019f4be2-94a4-71b2-a106-c1da42bd642a`의 완결 원본을 교체·검증하고 ZIP과 GitHub 해시를 갱신해야 합니다.
+- 제출 logs의 메인 작업 JSONL은 최종 산출물 확정 cutoff 시점까지의 원본 byte-for-byte snapshot입니다. 정확한 cutoff, 바이트 수, 원본·복사본 SHA-256은 `validation/cutoff-log-verification.json`에 기록합니다. cutoff 이후의 패키징·업로드 확인 대화는 제출 범위에 포함하지 않습니다.
 - 공개 페이지는 변경·삭제될 수 있으며 검증 시점 이후 내용이 달라질 수 있습니다.

@@ -1,0 +1,14 @@
+﻿{
+    "status":  "CUTOFF_SNAPSHOT_READY",
+    "session_id":  "019f4be2-94a4-71b2-a106-c1da42bd642a",
+    "cutoff_kst":  "2026-07-10 23:49:24.340 +09:00",
+    "source_path":  "C:\\Users\\letgo\\.codex\\sessions\\2026\\07\\10\\rollout-2026-07-10T20-56-11-019f4be2-94a4-71b2-a106-c1da42bd642a.jsonl",
+    "captured_source_bytes":  2817344,
+    "submitted_log_path":  "C:\\Users\\letgo\\Documents\\인재전쟁\\final-workspaces\\musinsa\\logs\\root-session-019f4be2-94a4-71b2-a106-c1da42bd642a.jsonl",
+    "submitted_log_bytes":  2817344,
+    "source_snapshot_sha256":  "89cb8795ffc7fd849b3e54fa94d5ac713e9e1df865ef0883d2c5ac863f803eb0",
+    "submitted_log_sha256":  "89cb8795ffc7fd849b3e54fa94d5ac713e9e1df865ef0883d2c5ac863f803eb0",
+    "byte_for_byte_match":  true,
+    "secret_scan":  "PASS",
+    "scope_note":  "Includes the original session through this cutoff. Later packaging and upload-confirmation activity is intentionally outside submission scope."
+}

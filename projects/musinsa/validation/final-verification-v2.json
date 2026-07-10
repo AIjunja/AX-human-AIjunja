@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "zipPath": "C:\\Users\\letgo\\Documents\\인재전쟁\\final-deliverables\\musinsa-submission.zip",
+  "zipSha256": "35718e5d9852bbce764d4623237b0cb8398861445386857e90e39d2863e13b32",
+  "entryCount": 15,
+  "sourceHashes": {
+    "README.md": "fde3ea59798260b2b419e43949985d66a0c6f9ee1239c12f9ae3be84872b4e92",
+    "logs/fresh-failed-model-019f4c30-7d69-7af2-b5f6-83af29f88b65.jsonl": "81a4956cfce9bca063d07adae52db9998257acaa08f7c4e2d225221971eff1d3",
+    "logs/fresh-workflow-019f4c02-8c8b-7db2-9f7e-d03c26f9a61e.jsonl": "d3dcd11ef21d5c5ba546c127d2e36e28cd779bf8fbf9b814d30e636fb9cfef43",
+    "logs/fresh-workflow-019f4c0e-692b-74b2-a000-06dcdf1c2cc0.jsonl": "5b32715ea3a4ade31ebc9b0fc88db79f2086aa5b8ab2fdd36e459eb0281eee4d",
+    "logs/fresh-workflow-current-019f4c30-d90c-7bc3-b97a-0b03ac1d2bd2.jsonl": "43dffab183e46f7731482a3d6b69430ca663cc27673d93e42cef374da9ebd88a",
+    "logs/fresh-workflow-v2-019f4c73-007a-7441-9204-eeee5eb0508f.jsonl": "8aaff5941eeeca9610344ed17ca846bdff284242554170454302a75f1ae8f920",
+    "logs/root-session-019f4be2-94a4-71b2-a106-c1da42bd642a.jsonl": "4a89724136708ba10c6519745e74b309a7d0e598f7d98f4151c43563a89f3d66",
+    "src/.codex-plugin/plugin.json": "0b84f5255bbb6d1dca410afea02df35db5f9739d289ea794a9234d7090b1b7d2",
+    "src/fixtures/invalid.json": "db0620ffe2b9090941d914d179de75eb27b544b91dde6f009d6674607f8345d7",
+    "src/fixtures/normal.json": "35e604bb7a3a1a7f45ed9f6b8e95f00fb0d4c25f1af4ce5a334b77316f386405",
+    "src/fixtures/sparse.json": "1ae06e0af3165140886ca28e3722ea5b9c02fec47ed660f3d63a1ea8117dfe95",
+    "src/scripts/review_to_repro.py": "5355b73225b7daeb6bf56fcbe04b6ed2a108a189de5401e05ee52640f16fdfad",
+    "src/skills/musinsa-review-to-repro/SKILL.md": "e03b5b0a980aec75309a936ab6dd23878f539fcee94df985e6a124dd5976a3f8",
+    "src/skills/musinsa-review-to-repro/agents/openai.yaml": "538e6e9ee14c2e22a40200b77a5749bae66bc728a98268317ee8e9a72393d368",
+    "src/tests/test_review_to_repro.py": "d0c30365f435fd4208ccb704760b5b89841e7d5c73fad90b9d9c5a5ac3bd42d9"
+  },
+  "archiveHashes": {
+    "README.md": "fde3ea59798260b2b419e43949985d66a0c6f9ee1239c12f9ae3be84872b4e92",
+    "logs/fresh-failed-model-019f4c30-7d69-7af2-b5f6-83af29f88b65.jsonl": "81a4956cfce9bca063d07adae52db9998257acaa08f7c4e2d225221971eff1d3",
+    "logs/fresh-workflow-019f4c02-8c8b-7db2-9f7e-d03c26f9a61e.jsonl": "d3dcd11ef21d5c5ba546c127d2e36e28cd779bf8fbf9b814d30e636fb9cfef43",
+    "logs/fresh-workflow-019f4c0e-692b-74b2-a000-06dcdf1c2cc0.jsonl": "5b32715ea3a4ade31ebc9b0fc88db79f2086aa5b8ab2fdd36e459eb0281eee4d",
+    "logs/fresh-workflow-current-019f4c30-d90c-7bc3-b97a-0b03ac1d2bd2.jsonl": "43dffab183e46f7731482a3d6b69430ca663cc27673d93e42cef374da9ebd88a",
+    "logs/fresh-workflow-v2-019f4c73-007a-7441-9204-eeee5eb0508f.jsonl": "8aaff5941eeeca9610344ed17ca846bdff284242554170454302a75f1ae8f920",
+    "logs/root-session-019f4be2-94a4-71b2-a106-c1da42bd642a.jsonl": "4a89724136708ba10c6519745e74b309a7d0e598f7d98f4151c43563a89f3d66",
+    "src/.codex-plugin/plugin.json": "0b84f5255bbb6d1dca410afea02df35db5f9739d289ea794a9234d7090b1b7d2",
+    "src/fixtures/invalid.json": "db0620ffe2b9090941d914d179de75eb27b544b91dde6f009d6674607f8345d7",
+    "src/fixtures/normal.json": "35e604bb7a3a1a7f45ed9f6b8e95f00fb0d4c25f1af4ce5a334b77316f386405",
+    "src/fixtures/sparse.json": "1ae06e0af3165140886ca28e3722ea5b9c02fec47ed660f3d63a1ea8117dfe95",
+    "src/scripts/review_to_repro.py": "5355b73225b7daeb6bf56fcbe04b6ed2a108a189de5401e05ee52640f16fdfad",
+    "src/skills/musinsa-review-to-repro/SKILL.md": "e03b5b0a980aec75309a936ab6dd23878f539fcee94df985e6a124dd5976a3f8",
+    "src/skills/musinsa-review-to-repro/agents/openai.yaml": "538e6e9ee14c2e22a40200b77a5749bae66bc728a98268317ee8e9a72393d368",
+    "src/tests/test_review_to_repro.py": "d0c30365f435fd4208ccb704760b5b89841e7d5c73fad90b9d9c5a5ac3bd42d9"
+  },
+  "findings": []
+}

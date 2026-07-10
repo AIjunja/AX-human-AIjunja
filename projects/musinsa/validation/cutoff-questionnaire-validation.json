@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "questionnairePath": "C:\\Users\\letgo\\Documents\\인재전쟁\\final-questionnaires\\musinsa.json",
+  "submissionRoot": "C:\\Users\\letgo\\Documents\\인재전쟁\\temp-musinsa-submission-stage",
+  "company": "무신사",
+  "pluginName": "musinsa-review-to-repro-qa",
+  "sourceUrl": "https://www.musinsacareers.com/ko/o/208642",
+  "characterCounts": {
+    "q1": 180,
+    "q2": 397,
+    "q3": 593,
+    "q4": 417,
+    "q5": 596
+  },
+  "characterLimits": {
+    "q1": 800,
+    "q2": 800,
+    "q3": 1000,
+    "q4": 800,
+    "q5": 800
+  },
+  "findings": []
+}
