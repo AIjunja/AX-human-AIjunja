@@ -1,0 +1,32 @@
+{
+  "name": "musinsa-review-to-repro-qa",
+  "version": "1.0.1",
+  "description": "Convert public Musinsa app-review symptoms into evidence-linked QA tickets and regression-test drafts without inventing causes.",
+  "author": {
+    "name": "AX War Musinsa Submission"
+  },
+  "license": "MIT",
+  "keywords": [
+    "musinsa",
+    "qa",
+    "voc",
+    "app-reviews",
+    "regression-testing"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "무신사 Review-to-Repro QA",
+    "shortDescription": "공개 앱 리뷰를 증거 연계 QA 티켓으로 변환",
+    "longDescription": "무신사 공개 앱 리뷰의 여러 관찰 증상을 독립 티켓으로 분리하고 evidence ID, NEEDS_REPRO 상태, 회귀 테스트 초안을 보존합니다. 원인과 사용자 전체 발생률은 추정하지 않습니다.",
+    "developerName": "AX War Musinsa Submission",
+    "category": "Productivity",
+    "capabilities": [
+      "Instructions",
+      "Local scripts"
+    ],
+    "defaultPrompt": [
+      "Use $musinsa-review-to-repro on the supplied public-review fixture."
+    ]
+  }
+}
+

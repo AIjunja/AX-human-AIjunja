@@ -1,0 +1,5 @@
+interface:
+  display_name: "Musinsa Review-to-Repro QA"
+  short_description: "Turn public app-review symptoms into evidence-linked QA tickets."
+  default_prompt: "Use $musinsa-review-to-repro to process the supplied review fixture into QA tickets and regression-test drafts."
+

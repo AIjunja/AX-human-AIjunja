@@ -1,0 +1,337 @@
+{
+  "schema_version": "1.0",
+  "sample_scope": "public_app_review_fixture_not_user_incidence",
+  "input_evidence_ids": [
+    "APPSTORE-14280470370"
+  ],
+  "tickets": [
+    {
+      "ticket_id": "MUS-CHECKOUT-CHECKOUT_LATENCY-36944cd348",
+      "journey_stage": "checkout",
+      "observed_symptom": {
+        "code": "checkout_latency",
+        "statement": "결제 단계의 응답이 지연된다고 보고됨"
+      },
+      "evidence_ids": [
+        "APPSTORE-14280470370"
+      ],
+      "source_review_ids": [
+        "14280470370"
+      ],
+      "evidence_refs": [
+        {
+          "evidence_id": "APPSTORE-14280470370",
+          "source_review_id": "14280470370",
+          "source": "apple_app_store",
+          "source_url": "https://itunes.apple.com/kr/rss/customerreviews/page=1/id=1003139529/sortby=mostrecent/json",
+          "review_date": "2026-07-08T20:25:49-07:00",
+          "rating": 1
+        }
+      ],
+      "status": "READY_FOR_REPRO",
+      "information_gaps": [],
+      "environment": {
+        "device": "TEST-iPhone-15",
+        "os_version": "TEST-iOS-18.5",
+        "app_version": "4.81.0",
+        "provenance": "synthetic_test_context"
+      },
+      "reproduction_draft": {
+        "preconditions": [
+          "테스트 계정·상품·데이터를 사람이 확정한다"
+        ],
+        "steps": [
+          "checkout 여정 단계에 진입한다",
+          "리뷰에 보고된 사용자 동작을 수행한다",
+          "실제 결과와 화면·시각·환경을 기록한다"
+        ],
+        "expected": "정의된 서비스 상태와 사용자 흐름이 유지된다",
+        "observed": "결제 단계의 응답이 지연된다고 보고됨",
+        "human_validation_required": true
+      },
+      "human_decisions": [
+        "severity",
+        "business_priority",
+        "duplicate_confirmation",
+        "actual_reproduction_result",
+        "policy_violation"
+      ],
+      "cause_handling": "NOT_GENERATED_FROM_REVIEW"
+    },
+    {
+      "ticket_id": "MUS-CROSS_CUTTING_PERFORMANCE-DEVICE_OVERHEATING-b1d5b65492",
+      "journey_stage": "cross_cutting_performance",
+      "observed_symptom": {
+        "code": "device_overheating",
+        "statement": "앱 사용 중 기기 발열이 증가한다고 보고됨"
+      },
+      "evidence_ids": [
+        "APPSTORE-14280470370"
+      ],
+      "source_review_ids": [
+        "14280470370"
+      ],
+      "evidence_refs": [
+        {
+          "evidence_id": "APPSTORE-14280470370",
+          "source_review_id": "14280470370",
+          "source": "apple_app_store",
+          "source_url": "https://itunes.apple.com/kr/rss/customerreviews/page=1/id=1003139529/sortby=mostrecent/json",
+          "review_date": "2026-07-08T20:25:49-07:00",
+          "rating": 1
+        }
+      ],
+      "status": "READY_FOR_REPRO",
+      "information_gaps": [],
+      "environment": {
+        "device": "TEST-iPhone-15",
+        "os_version": "TEST-iOS-18.5",
+        "app_version": "4.81.0",
+        "provenance": "synthetic_test_context"
+      },
+      "reproduction_draft": {
+        "preconditions": [
+          "테스트 계정·상품·데이터를 사람이 확정한다"
+        ],
+        "steps": [
+          "cross_cutting_performance 여정 단계에 진입한다",
+          "리뷰에 보고된 사용자 동작을 수행한다",
+          "실제 결과와 화면·시각·환경을 기록한다"
+        ],
+        "expected": "정의된 서비스 상태와 사용자 흐름이 유지된다",
+        "observed": "앱 사용 중 기기 발열이 증가한다고 보고됨",
+        "human_validation_required": true
+      },
+      "human_decisions": [
+        "severity",
+        "business_priority",
+        "duplicate_confirmation",
+        "actual_reproduction_result",
+        "policy_violation"
+      ],
+      "cause_handling": "NOT_GENERATED_FROM_REVIEW"
+    },
+    {
+      "ticket_id": "MUS-DETAIL-SOLD_OUT_MISLABEL-67b9bd8214",
+      "journey_stage": "detail",
+      "observed_symptom": {
+        "code": "sold_out_mislabel",
+        "statement": "상품 상세에서 판매 가능 여부와 품절 표시가 일치하지 않는다고 보고됨"
+      },
+      "evidence_ids": [
+        "APPSTORE-14280470370"
+      ],
+      "source_review_ids": [
+        "14280470370"
+      ],
+      "evidence_refs": [
+        {
+          "evidence_id": "APPSTORE-14280470370",
+          "source_review_id": "14280470370",
+          "source": "apple_app_store",
+          "source_url": "https://itunes.apple.com/kr/rss/customerreviews/page=1/id=1003139529/sortby=mostrecent/json",
+          "review_date": "2026-07-08T20:25:49-07:00",
+          "rating": 1
+        }
+      ],
+      "status": "READY_FOR_REPRO",
+      "information_gaps": [],
+      "environment": {
+        "device": "TEST-iPhone-15",
+        "os_version": "TEST-iOS-18.5",
+        "app_version": "4.81.0",
+        "provenance": "synthetic_test_context"
+      },
+      "reproduction_draft": {
+        "preconditions": [
+          "테스트 계정·상품·데이터를 사람이 확정한다"
+        ],
+        "steps": [
+          "detail 여정 단계에 진입한다",
+          "리뷰에 보고된 사용자 동작을 수행한다",
+          "실제 결과와 화면·시각·환경을 기록한다"
+        ],
+        "expected": "정의된 서비스 상태와 사용자 흐름이 유지된다",
+        "observed": "상품 상세에서 판매 가능 여부와 품절 표시가 일치하지 않는다고 보고됨",
+        "human_validation_required": true
+      },
+      "human_decisions": [
+        "severity",
+        "business_priority",
+        "duplicate_confirmation",
+        "actual_reproduction_result",
+        "policy_violation"
+      ],
+      "cause_handling": "NOT_GENERATED_FROM_REVIEW"
+    },
+    {
+      "ticket_id": "MUS-LISTING_DETAIL-NAVIGATION_LAG-aa4d39509f",
+      "journey_stage": "listing_detail",
+      "observed_symptom": {
+        "code": "navigation_lag",
+        "statement": "목록과 상품 상세 사이 화면 전환이 지연된다고 보고됨"
+      },
+      "evidence_ids": [
+        "APPSTORE-14280470370"
+      ],
+      "source_review_ids": [
+        "14280470370"
+      ],
+      "evidence_refs": [
+        {
+          "evidence_id": "APPSTORE-14280470370",
+          "source_review_id": "14280470370",
+          "source": "apple_app_store",
+          "source_url": "https://itunes.apple.com/kr/rss/customerreviews/page=1/id=1003139529/sortby=mostrecent/json",
+          "review_date": "2026-07-08T20:25:49-07:00",
+          "rating": 1
+        }
+      ],
+      "status": "READY_FOR_REPRO",
+      "information_gaps": [],
+      "environment": {
+        "device": "TEST-iPhone-15",
+        "os_version": "TEST-iOS-18.5",
+        "app_version": "4.81.0",
+        "provenance": "synthetic_test_context"
+      },
+      "reproduction_draft": {
+        "preconditions": [
+          "테스트 계정·상품·데이터를 사람이 확정한다"
+        ],
+        "steps": [
+          "listing_detail 여정 단계에 진입한다",
+          "리뷰에 보고된 사용자 동작을 수행한다",
+          "실제 결과와 화면·시각·환경을 기록한다"
+        ],
+        "expected": "정의된 서비스 상태와 사용자 흐름이 유지된다",
+        "observed": "목록과 상품 상세 사이 화면 전환이 지연된다고 보고됨",
+        "human_validation_required": true
+      },
+      "human_decisions": [
+        "severity",
+        "business_priority",
+        "duplicate_confirmation",
+        "actual_reproduction_result",
+        "policy_violation"
+      ],
+      "cause_handling": "NOT_GENERATED_FROM_REVIEW"
+    }
+  ],
+  "regression_tests": [
+    {
+      "test_id": "RT-CHECKOUT-CHECKOUT_LATENCY-36944cd348",
+      "ticket_id": "MUS-CHECKOUT-CHECKOUT_LATENCY-36944cd348",
+      "journey_stage": "checkout",
+      "symptom_code": "checkout_latency",
+      "evidence_ids": [
+        "APPSTORE-14280470370"
+      ],
+      "preconditions": [
+        "테스트 계정과 대상 상품을 사람이 확정한다"
+      ],
+      "steps": [
+        "해당 여정 단계에 진입한다",
+        "관찰 증상과 동일한 사용자 동작을 수행한다"
+      ],
+      "oracle": "관찰 증상이 발생하지 않고 기대 상태가 유지되는지 확인한다",
+      "automation_candidate": null,
+      "automation_assessment": "HUMAN_ASSESSMENT_REQUIRED",
+      "human_review_required": true
+    },
+    {
+      "test_id": "RT-CROSS_CUTTING_PERFORMANCE-DEVICE_OVERHEATING-b1d5b65492",
+      "ticket_id": "MUS-CROSS_CUTTING_PERFORMANCE-DEVICE_OVERHEATING-b1d5b65492",
+      "journey_stage": "cross_cutting_performance",
+      "symptom_code": "device_overheating",
+      "evidence_ids": [
+        "APPSTORE-14280470370"
+      ],
+      "preconditions": [
+        "테스트 계정과 대상 상품을 사람이 확정한다"
+      ],
+      "steps": [
+        "해당 여정 단계에 진입한다",
+        "관찰 증상과 동일한 사용자 동작을 수행한다"
+      ],
+      "oracle": "관찰 증상이 발생하지 않고 기대 상태가 유지되는지 확인한다",
+      "automation_candidate": null,
+      "automation_assessment": "HUMAN_ASSESSMENT_REQUIRED",
+      "human_review_required": true
+    },
+    {
+      "test_id": "RT-DETAIL-SOLD_OUT_MISLABEL-67b9bd8214",
+      "ticket_id": "MUS-DETAIL-SOLD_OUT_MISLABEL-67b9bd8214",
+      "journey_stage": "detail",
+      "symptom_code": "sold_out_mislabel",
+      "evidence_ids": [
+        "APPSTORE-14280470370"
+      ],
+      "preconditions": [
+        "테스트 계정과 대상 상품을 사람이 확정한다"
+      ],
+      "steps": [
+        "해당 여정 단계에 진입한다",
+        "관찰 증상과 동일한 사용자 동작을 수행한다"
+      ],
+      "oracle": "관찰 증상이 발생하지 않고 기대 상태가 유지되는지 확인한다",
+      "automation_candidate": null,
+      "automation_assessment": "HUMAN_ASSESSMENT_REQUIRED",
+      "human_review_required": true
+    },
+    {
+      "test_id": "RT-LISTING_DETAIL-NAVIGATION_LAG-aa4d39509f",
+      "ticket_id": "MUS-LISTING_DETAIL-NAVIGATION_LAG-aa4d39509f",
+      "journey_stage": "listing_detail",
+      "symptom_code": "navigation_lag",
+      "evidence_ids": [
+        "APPSTORE-14280470370"
+      ],
+      "preconditions": [
+        "테스트 계정과 대상 상품을 사람이 확정한다"
+      ],
+      "steps": [
+        "해당 여정 단계에 진입한다",
+        "관찰 증상과 동일한 사용자 동작을 수행한다"
+      ],
+      "oracle": "관찰 증상이 발생하지 않고 기대 상태가 유지되는지 확인한다",
+      "automation_candidate": null,
+      "automation_assessment": "HUMAN_ASSESSMENT_REQUIRED",
+      "human_review_required": true
+    }
+  ],
+  "evidence_traceability": {
+    "APPSTORE-14280470370": {
+      "source_review_id": "14280470370",
+      "ticket_ids": [
+        "MUS-CHECKOUT-CHECKOUT_LATENCY-36944cd348",
+        "MUS-CROSS_CUTTING_PERFORMANCE-DEVICE_OVERHEATING-b1d5b65492",
+        "MUS-DETAIL-SOLD_OUT_MISLABEL-67b9bd8214",
+        "MUS-LISTING_DETAIL-NAVIGATION_LAG-aa4d39509f"
+      ],
+      "regression_test_ids": [
+        "RT-CHECKOUT-CHECKOUT_LATENCY-36944cd348",
+        "RT-CROSS_CUTTING_PERFORMANCE-DEVICE_OVERHEATING-b1d5b65492",
+        "RT-DETAIL-SOLD_OUT_MISLABEL-67b9bd8214",
+        "RT-LISTING_DETAIL-NAVIGATION_LAG-aa4d39509f"
+      ]
+    }
+  },
+  "stable_fields_sha256": "e8cdf10f69de3750b1167aff70fe5ae3648048f356aec89cf52beed7247f2412",
+  "summary": {
+    "input_reviews": 1,
+    "input_evidence_ids": 1,
+    "tickets": 4,
+    "regression_tests": 4,
+    "status_counts": {
+      "READY_FOR_REPRO": 4,
+      "NEEDS_REPRO": 0
+    },
+    "evidence_preservation_rate": 1.0
+  },
+  "safety_limits": [
+    "공개 리뷰는 사용자 보고이며 실제 장애 또는 전체 사용자 발생률의 증거가 아님",
+    "리뷰에서 원인을 생성하지 않음",
+    "심각도·우선순위·중복·실제 재현 성공은 사람이 판단함"
+  ]
+}

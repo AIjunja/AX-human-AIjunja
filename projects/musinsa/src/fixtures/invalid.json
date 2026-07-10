@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "sample_scope": "invalid_fixture",
+  "reviews": [
+    {
+      "source_review_id": "missing-evidence-id",
+      "source": "apple_app_store",
+      "source_url": "https://apps.apple.com/kr/app/id1003139529",
+      "review_date": "2026-07-10T00:00:00Z",
+      "rating": 1,
+      "locale": "ko-KR",
+      "title": "invalid",
+      "text": "결제가 느립니다.",
+      "environment": {}
+    }
+  ]
+}
+

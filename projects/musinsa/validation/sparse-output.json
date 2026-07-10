@@ -1,0 +1,259 @@
+{
+  "schema_version": "1.0",
+  "sample_scope": "public_app_review_fixture_not_user_incidence",
+  "input_evidence_ids": [
+    "GOOGLEPLAY-f039a383-fee3-41dd-a7f8-e0e24112cfb0"
+  ],
+  "tickets": [
+    {
+      "ticket_id": "MUS-CHECKOUT-EXTERNAL_PAYMENT_RETURN_RESTART-9bfddbad57",
+      "journey_stage": "checkout",
+      "observed_symptom": {
+        "code": "external_payment_return_restart",
+        "statement": "외부 결제 화면에서 돌아온 뒤 앱 흐름이 다시 시작된다고 보고됨"
+      },
+      "evidence_ids": [
+        "GOOGLEPLAY-f039a383-fee3-41dd-a7f8-e0e24112cfb0"
+      ],
+      "source_review_ids": [
+        "f039a383-fee3-41dd-a7f8-e0e24112cfb0"
+      ],
+      "evidence_refs": [
+        {
+          "evidence_id": "GOOGLEPLAY-f039a383-fee3-41dd-a7f8-e0e24112cfb0",
+          "source_review_id": "f039a383-fee3-41dd-a7f8-e0e24112cfb0",
+          "source": "google_play",
+          "source_url": "https://play.google.com/store/apps/details?id=com.musinsa.store&hl=ko&gl=KR",
+          "review_date": "2026-06-26T16:27:36+00:00",
+          "rating": 1
+        }
+      ],
+      "status": "NEEDS_REPRO",
+      "information_gaps": [
+        "device",
+        "os_version",
+        "app_version"
+      ],
+      "environment": {},
+      "reproduction_draft": {
+        "preconditions": [
+          "테스트 계정·상품·데이터를 사람이 확정한다"
+        ],
+        "steps": [
+          "checkout 여정 단계에 진입한다",
+          "리뷰에 보고된 사용자 동작을 수행한다",
+          "실제 결과와 화면·시각·환경을 기록한다"
+        ],
+        "expected": "정의된 서비스 상태와 사용자 흐름이 유지된다",
+        "observed": "외부 결제 화면에서 돌아온 뒤 앱 흐름이 다시 시작된다고 보고됨",
+        "human_validation_required": true
+      },
+      "human_decisions": [
+        "severity",
+        "business_priority",
+        "duplicate_confirmation",
+        "actual_reproduction_result",
+        "policy_violation"
+      ],
+      "cause_handling": "NOT_GENERATED_FROM_REVIEW"
+    },
+    {
+      "ticket_id": "MUS-CHECKOUT-PAYMENT_NOT_COMPLETED-7e2afec34c",
+      "journey_stage": "checkout",
+      "observed_symptom": {
+        "code": "payment_not_completed",
+        "statement": "결제 완료 상태를 확인할 수 없다고 보고됨"
+      },
+      "evidence_ids": [
+        "GOOGLEPLAY-f039a383-fee3-41dd-a7f8-e0e24112cfb0"
+      ],
+      "source_review_ids": [
+        "f039a383-fee3-41dd-a7f8-e0e24112cfb0"
+      ],
+      "evidence_refs": [
+        {
+          "evidence_id": "GOOGLEPLAY-f039a383-fee3-41dd-a7f8-e0e24112cfb0",
+          "source_review_id": "f039a383-fee3-41dd-a7f8-e0e24112cfb0",
+          "source": "google_play",
+          "source_url": "https://play.google.com/store/apps/details?id=com.musinsa.store&hl=ko&gl=KR",
+          "review_date": "2026-06-26T16:27:36+00:00",
+          "rating": 1
+        }
+      ],
+      "status": "NEEDS_REPRO",
+      "information_gaps": [
+        "device",
+        "os_version",
+        "app_version"
+      ],
+      "environment": {},
+      "reproduction_draft": {
+        "preconditions": [
+          "테스트 계정·상품·데이터를 사람이 확정한다"
+        ],
+        "steps": [
+          "checkout 여정 단계에 진입한다",
+          "리뷰에 보고된 사용자 동작을 수행한다",
+          "실제 결과와 화면·시각·환경을 기록한다"
+        ],
+        "expected": "정의된 서비스 상태와 사용자 흐름이 유지된다",
+        "observed": "결제 완료 상태를 확인할 수 없다고 보고됨",
+        "human_validation_required": true
+      },
+      "human_decisions": [
+        "severity",
+        "business_priority",
+        "duplicate_confirmation",
+        "actual_reproduction_result",
+        "policy_violation"
+      ],
+      "cause_handling": "NOT_GENERATED_FROM_REVIEW"
+    },
+    {
+      "ticket_id": "MUS-CHECKOUT-PROMOTION_STATE_MISMATCH-a96f395a30",
+      "journey_stage": "checkout",
+      "observed_symptom": {
+        "code": "promotion_state_mismatch",
+        "statement": "미완료 결제와 프로모션 사용 상태가 일치하지 않는다고 보고됨"
+      },
+      "evidence_ids": [
+        "GOOGLEPLAY-f039a383-fee3-41dd-a7f8-e0e24112cfb0"
+      ],
+      "source_review_ids": [
+        "f039a383-fee3-41dd-a7f8-e0e24112cfb0"
+      ],
+      "evidence_refs": [
+        {
+          "evidence_id": "GOOGLEPLAY-f039a383-fee3-41dd-a7f8-e0e24112cfb0",
+          "source_review_id": "f039a383-fee3-41dd-a7f8-e0e24112cfb0",
+          "source": "google_play",
+          "source_url": "https://play.google.com/store/apps/details?id=com.musinsa.store&hl=ko&gl=KR",
+          "review_date": "2026-06-26T16:27:36+00:00",
+          "rating": 1
+        }
+      ],
+      "status": "NEEDS_REPRO",
+      "information_gaps": [
+        "device",
+        "os_version",
+        "app_version"
+      ],
+      "environment": {},
+      "reproduction_draft": {
+        "preconditions": [
+          "테스트 계정·상품·데이터를 사람이 확정한다"
+        ],
+        "steps": [
+          "checkout 여정 단계에 진입한다",
+          "리뷰에 보고된 사용자 동작을 수행한다",
+          "실제 결과와 화면·시각·환경을 기록한다"
+        ],
+        "expected": "정의된 서비스 상태와 사용자 흐름이 유지된다",
+        "observed": "미완료 결제와 프로모션 사용 상태가 일치하지 않는다고 보고됨",
+        "human_validation_required": true
+      },
+      "human_decisions": [
+        "severity",
+        "business_priority",
+        "duplicate_confirmation",
+        "actual_reproduction_result",
+        "policy_violation"
+      ],
+      "cause_handling": "NOT_GENERATED_FROM_REVIEW"
+    }
+  ],
+  "regression_tests": [
+    {
+      "test_id": "RT-CHECKOUT-EXTERNAL_PAYMENT_RETURN_RESTART-9bfddbad57",
+      "ticket_id": "MUS-CHECKOUT-EXTERNAL_PAYMENT_RETURN_RESTART-9bfddbad57",
+      "journey_stage": "checkout",
+      "symptom_code": "external_payment_return_restart",
+      "evidence_ids": [
+        "GOOGLEPLAY-f039a383-fee3-41dd-a7f8-e0e24112cfb0"
+      ],
+      "preconditions": [
+        "테스트 계정과 대상 상품을 사람이 확정한다"
+      ],
+      "steps": [
+        "해당 여정 단계에 진입한다",
+        "관찰 증상과 동일한 사용자 동작을 수행한다"
+      ],
+      "oracle": "관찰 증상이 발생하지 않고 기대 상태가 유지되는지 확인한다",
+      "automation_candidate": null,
+      "automation_assessment": "HUMAN_ASSESSMENT_REQUIRED",
+      "human_review_required": true
+    },
+    {
+      "test_id": "RT-CHECKOUT-PAYMENT_NOT_COMPLETED-7e2afec34c",
+      "ticket_id": "MUS-CHECKOUT-PAYMENT_NOT_COMPLETED-7e2afec34c",
+      "journey_stage": "checkout",
+      "symptom_code": "payment_not_completed",
+      "evidence_ids": [
+        "GOOGLEPLAY-f039a383-fee3-41dd-a7f8-e0e24112cfb0"
+      ],
+      "preconditions": [
+        "테스트 계정과 대상 상품을 사람이 확정한다"
+      ],
+      "steps": [
+        "해당 여정 단계에 진입한다",
+        "관찰 증상과 동일한 사용자 동작을 수행한다"
+      ],
+      "oracle": "관찰 증상이 발생하지 않고 기대 상태가 유지되는지 확인한다",
+      "automation_candidate": null,
+      "automation_assessment": "HUMAN_ASSESSMENT_REQUIRED",
+      "human_review_required": true
+    },
+    {
+      "test_id": "RT-CHECKOUT-PROMOTION_STATE_MISMATCH-a96f395a30",
+      "ticket_id": "MUS-CHECKOUT-PROMOTION_STATE_MISMATCH-a96f395a30",
+      "journey_stage": "checkout",
+      "symptom_code": "promotion_state_mismatch",
+      "evidence_ids": [
+        "GOOGLEPLAY-f039a383-fee3-41dd-a7f8-e0e24112cfb0"
+      ],
+      "preconditions": [
+        "테스트 계정과 대상 상품을 사람이 확정한다"
+      ],
+      "steps": [
+        "해당 여정 단계에 진입한다",
+        "관찰 증상과 동일한 사용자 동작을 수행한다"
+      ],
+      "oracle": "관찰 증상이 발생하지 않고 기대 상태가 유지되는지 확인한다",
+      "automation_candidate": null,
+      "automation_assessment": "HUMAN_ASSESSMENT_REQUIRED",
+      "human_review_required": true
+    }
+  ],
+  "evidence_traceability": {
+    "GOOGLEPLAY-f039a383-fee3-41dd-a7f8-e0e24112cfb0": {
+      "source_review_id": "f039a383-fee3-41dd-a7f8-e0e24112cfb0",
+      "ticket_ids": [
+        "MUS-CHECKOUT-EXTERNAL_PAYMENT_RETURN_RESTART-9bfddbad57",
+        "MUS-CHECKOUT-PAYMENT_NOT_COMPLETED-7e2afec34c",
+        "MUS-CHECKOUT-PROMOTION_STATE_MISMATCH-a96f395a30"
+      ],
+      "regression_test_ids": [
+        "RT-CHECKOUT-EXTERNAL_PAYMENT_RETURN_RESTART-9bfddbad57",
+        "RT-CHECKOUT-PAYMENT_NOT_COMPLETED-7e2afec34c",
+        "RT-CHECKOUT-PROMOTION_STATE_MISMATCH-a96f395a30"
+      ]
+    }
+  },
+  "stable_fields_sha256": "7abf36a682d0351a400ea7cadef9cdb7b32ecf7a195bbef33e221c1b44af907e",
+  "summary": {
+    "input_reviews": 1,
+    "input_evidence_ids": 1,
+    "tickets": 3,
+    "regression_tests": 3,
+    "status_counts": {
+      "READY_FOR_REPRO": 0,
+      "NEEDS_REPRO": 3
+    },
+    "evidence_preservation_rate": 1.0
+  },
+  "safety_limits": [
+    "공개 리뷰는 사용자 보고이며 실제 장애 또는 전체 사용자 발생률의 증거가 아님",
+    "리뷰에서 원인을 생성하지 않음",
+    "심각도·우선순위·중복·실제 재현 성공은 사람이 판단함"
+  ]
+}

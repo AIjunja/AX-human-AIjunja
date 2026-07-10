@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "submissionRoot": "C:\\Users\\letgo\\Documents\\인재전쟁\\temp-musinsa-submission-stage",
+  "pluginName": "musinsa-review-to-repro-qa",
+  "logFileCount": 5,
+  "fileHashes": {
+    "README.md": "6ed3004d690aed9b188e0de266bb69b3f78b71a3705817dc98e50b32c3a8342c",
+    "logs/fresh-failed-model-019f4c30-7d69-7af2-b5f6-83af29f88b65.jsonl": "81a4956cfce9bca063d07adae52db9998257acaa08f7c4e2d225221971eff1d3",
+    "logs/fresh-workflow-019f4c02-8c8b-7db2-9f7e-d03c26f9a61e.jsonl": "d3dcd11ef21d5c5ba546c127d2e36e28cd779bf8fbf9b814d30e636fb9cfef43",
+    "logs/fresh-workflow-019f4c0e-692b-74b2-a000-06dcdf1c2cc0.jsonl": "5b32715ea3a4ade31ebc9b0fc88db79f2086aa5b8ab2fdd36e459eb0281eee4d",
+    "logs/fresh-workflow-current-019f4c30-d90c-7bc3-b97a-0b03ac1d2bd2.jsonl": "43dffab183e46f7731482a3d6b69430ca663cc27673d93e42cef374da9ebd88a",
+    "logs/root-session-019f4be2-94a4-71b2-a106-c1da42bd642a.jsonl": "4a89724136708ba10c6519745e74b309a7d0e598f7d98f4151c43563a89f3d66",
+    "src/.codex-plugin/plugin.json": "c467b104728f9b059ae829019fa7556268766963e801cd8b6b89ce8f0170a770",
+    "src/fixtures/invalid.json": "db0620ffe2b9090941d914d179de75eb27b544b91dde6f009d6674607f8345d7",
+    "src/fixtures/normal.json": "cc7022e1a4889c7fbc7d5784482c058e98f06ef7df23a282bd4297ee9e9aba05",
+    "src/fixtures/sparse.json": "0423869376b9cb1362e85ac3713e318c9c208441eb2a2d6cdb9ad18b262e5c9e",
+    "src/scripts/review_to_repro.py": "0794e73770121f10ce6d348ca7adb13d1dbdfae24b6cdf2cbb81ab507e41fcb2",
+    "src/skills/musinsa-review-to-repro/SKILL.md": "24f84aaa8c47065fa422a9f959db39041ce1f80510f6fdd237dab63130b7227a",
+    "src/skills/musinsa-review-to-repro/agents/openai.yaml": "538e6e9ee14c2e22a40200b77a5749bae66bc728a98268317ee8e9a72393d368",
+    "src/tests/test_review_to_repro.py": "2efcf107b9fcf89e55c1e6bc5458afa046a0ebf21020e721f042288216420c6e"
+  },
+  "findings": []
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "sample_scope": "public_app_review_fixture_not_user_incidence",
+  "fixture_note": "Public Google Play evidence with device, OS, and app version intentionally absent.",
+  "reviews": [
+    {
+      "evidence_id": "GOOGLEPLAY-f039a383-fee3-41dd-a7f8-e0e24112cfb0",
+      "source_review_id": "f039a383-fee3-41dd-a7f8-e0e24112cfb0",
+      "source": "google_play",
+      "source_url": "https://play.google.com/store/apps/details?id=com.musinsa.store&hl=ko&gl=KR",
+      "store_url": "https://play.google.com/store/apps/details?id=com.musinsa.store&hl=ko&gl=KR",
+      "review_date": "2026-06-26T16:27:36+00:00",
+      "rating": 1,
+      "locale": "ko-KR",
+      "title": "",
+      "text": "외부 페이 결제로 나갔다 돌아오면 앱이 다시 시작됩니다. 결제는 완료되지 않았는데 프로모션은 사용 처리됩니다.",
+      "text_provenance": "normalized_observation_from_public_review",
+      "environment": {}
+    }
+  ]
+}
+

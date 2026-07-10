@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "sample_scope": "public_app_review_fixture_not_user_incidence",
+  "fixture_note": "Public review evidence with a synthetic test environment. Device and OS are test-only values, not claims about the reviewer.",
+  "reviews": [
+    {
+      "evidence_id": "APPSTORE-14280470370",
+      "source_review_id": "14280470370",
+      "source": "apple_app_store",
+      "source_url": "https://itunes.apple.com/kr/rss/customerreviews/page=1/id=1003139529/sortby=mostrecent/json",
+      "store_url": "https://apps.apple.com/kr/app/id1003139529",
+      "review_date": "2026-07-08T20:25:49-07:00",
+      "rating": 1,
+      "locale": "ko-KR",
+      "title": "품절 표시 오류와 전반적인 앱 성능 문제 개선 필요",
+      "text": "상품 페이지에서 정상 판매 상품도 품절로 표시되고 결제가 느리며 목록과 상세 화면 전환이 버벅이고 휴대폰 발열도 심합니다.",
+      "text_provenance": "normalized_observation_from_public_review",
+      "environment": {
+        "device": "TEST-iPhone-15",
+        "os_version": "TEST-iOS-18.5",
+        "app_version": "4.81.0",
+        "provenance": "synthetic_test_context"
+      }
+    }
+  ]
+}
+
