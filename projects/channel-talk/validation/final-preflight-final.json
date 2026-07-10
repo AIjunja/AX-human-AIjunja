@@ -1,0 +1,17 @@
+﻿{
+    "top_level":  [
+                      "logs",
+                      "README.md",
+                      "src"
+                  ],
+    "entry_count":  10,
+    "zip_bytes":  294833,
+    "under_100mb":  true,
+    "zip_sha256":  "cb2694a57f643bc6957524d5d0b36bebad3ced124179930485b92ff7afeb1690",
+    "cache_files":  0,
+    "secret_pattern_hits":  0,
+    "official_plugin_validator":  "PASS",
+    "skill_validator":  "PASS",
+    "harness_validator":  "PASS",
+    "fresh_session":  "PASS"
+}
